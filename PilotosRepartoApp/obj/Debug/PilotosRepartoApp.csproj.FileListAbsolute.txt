@@ -1,0 +1,9 @@
+C:\Users\DELL-PC\source\repos\PilotosRepartoApp\bin\Debug\PilotosRepartoApp.exe.config
+C:\Users\DELL-PC\source\repos\PilotosRepartoApp\bin\Debug\PilotosRepartoApp.exe
+C:\Users\DELL-PC\source\repos\PilotosRepartoApp\bin\Debug\PilotosRepartoApp.pdb
+C:\Users\DELL-PC\source\repos\PilotosRepartoApp\obj\Debug\PilotosRepartoApp.frmLogin.resources
+C:\Users\DELL-PC\source\repos\PilotosRepartoApp\obj\Debug\PilotosRepartoApp.Properties.Resources.resources
+C:\Users\DELL-PC\source\repos\PilotosRepartoApp\obj\Debug\PilotosRepartoApp.csproj.GenerateResource.cache
+C:\Users\DELL-PC\source\repos\PilotosRepartoApp\obj\Debug\PilotosRepartoApp.csproj.CoreCompileInputs.cache
+C:\Users\DELL-PC\source\repos\PilotosRepartoApp\obj\Debug\PilotosRepartoApp.exe
+C:\Users\DELL-PC\source\repos\PilotosRepartoApp\obj\Debug\PilotosRepartoApp.pdb

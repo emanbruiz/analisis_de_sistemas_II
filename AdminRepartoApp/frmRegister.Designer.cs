@@ -43,7 +43,18 @@ namespace AdminRepartoApp
             this.txtDPI = new System.Windows.Forms.TextBox();
             this.lblDPI = new System.Windows.Forms.Label();
             this.btnRegisterCliente = new System.Windows.Forms.Button();
-            this.lblConfirmacion = new System.Windows.Forms.Label();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.lblContrasena = new System.Windows.Forms.Label();
+            this.cmbHorarios = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblPermisos = new System.Windows.Forms.Label();
+            this.chkEditarPermiso = new System.Windows.Forms.CheckBox();
+            this.chkEliminar = new System.Windows.Forms.CheckBox();
+            this.chkAnadir = new System.Windows.Forms.CheckBox();
+            this.lblTipoUsuario = new System.Windows.Forms.Label();
+            this.cmbTipoUsuario = new System.Windows.Forms.ComboBox();
+            this.lblGenero = new System.Windows.Forms.Label();
+            this.cmbGenero = new System.Windows.Forms.ComboBox();
             this.pnlMain.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,8 +65,9 @@ namespace AdminRepartoApp
             this.pnlMain.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlMain.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.pnlMain.Location = new System.Drawing.Point(0, 0);
+            this.pnlMain.Margin = new System.Windows.Forms.Padding(4);
             this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Size = new System.Drawing.Size(442, 59);
+            this.pnlMain.Size = new System.Drawing.Size(1146, 65);
             this.pnlMain.TabIndex = 1;
             // 
             // lblRegister
@@ -63,7 +75,8 @@ namespace AdminRepartoApp
             this.lblRegister.AutoSize = true;
             this.lblRegister.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRegister.ForeColor = System.Drawing.Color.White;
-            this.lblRegister.Location = new System.Drawing.Point(139, 20);
+            this.lblRegister.Location = new System.Drawing.Point(19, 25);
+            this.lblRegister.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRegister.Name = "lblRegister";
             this.lblRegister.Size = new System.Drawing.Size(164, 25);
             this.lblRegister.TabIndex = 0;
@@ -74,7 +87,8 @@ namespace AdminRepartoApp
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.Color.Black;
-            this.lblNombre.Location = new System.Drawing.Point(12, 81);
+            this.lblNombre.Location = new System.Drawing.Point(16, 100);
+            this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(301, 25);
             this.lblNombre.TabIndex = 2;
@@ -82,16 +96,18 @@ namespace AdminRepartoApp
             // 
             // txtNombres
             // 
-            this.txtNombres.Location = new System.Drawing.Point(17, 109);
+            this.txtNombres.Location = new System.Drawing.Point(23, 134);
+            this.txtNombres.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombres.Name = "txtNombres";
-            this.txtNombres.Size = new System.Drawing.Size(396, 20);
+            this.txtNombres.Size = new System.Drawing.Size(527, 19);
             this.txtNombres.TabIndex = 3;
             // 
             // txtApellidos
             // 
-            this.txtApellidos.Location = new System.Drawing.Point(17, 164);
+            this.txtApellidos.Location = new System.Drawing.Point(23, 202);
+            this.txtApellidos.Margin = new System.Windows.Forms.Padding(4);
             this.txtApellidos.Name = "txtApellidos";
-            this.txtApellidos.Size = new System.Drawing.Size(396, 20);
+            this.txtApellidos.Size = new System.Drawing.Size(527, 19);
             this.txtApellidos.TabIndex = 5;
             // 
             // lblApellidos
@@ -99,7 +115,8 @@ namespace AdminRepartoApp
             this.lblApellidos.AutoSize = true;
             this.lblApellidos.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblApellidos.ForeColor = System.Drawing.Color.Black;
-            this.lblApellidos.Location = new System.Drawing.Point(12, 136);
+            this.lblApellidos.Location = new System.Drawing.Point(16, 167);
+            this.lblApellidos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblApellidos.Name = "lblApellidos";
             this.lblApellidos.Size = new System.Drawing.Size(306, 25);
             this.lblApellidos.TabIndex = 4;
@@ -107,9 +124,10 @@ namespace AdminRepartoApp
             // 
             // txtDireccion
             // 
-            this.txtDireccion.Location = new System.Drawing.Point(17, 215);
+            this.txtDireccion.Location = new System.Drawing.Point(23, 328);
+            this.txtDireccion.Margin = new System.Windows.Forms.Padding(4);
             this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(396, 20);
+            this.txtDireccion.Size = new System.Drawing.Size(527, 19);
             this.txtDireccion.TabIndex = 7;
             // 
             // lblDireccion
@@ -117,7 +135,8 @@ namespace AdminRepartoApp
             this.lblDireccion.AutoSize = true;
             this.lblDireccion.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDireccion.ForeColor = System.Drawing.Color.Black;
-            this.lblDireccion.Location = new System.Drawing.Point(12, 187);
+            this.lblDireccion.Location = new System.Drawing.Point(16, 293);
+            this.lblDireccion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDireccion.Name = "lblDireccion";
             this.lblDireccion.Size = new System.Drawing.Size(376, 25);
             this.lblDireccion.TabIndex = 6;
@@ -125,9 +144,10 @@ namespace AdminRepartoApp
             // 
             // txtMail
             // 
-            this.txtMail.Location = new System.Drawing.Point(17, 272);
+            this.txtMail.Location = new System.Drawing.Point(23, 398);
+            this.txtMail.Margin = new System.Windows.Forms.Padding(4);
             this.txtMail.Name = "txtMail";
-            this.txtMail.Size = new System.Drawing.Size(396, 20);
+            this.txtMail.Size = new System.Drawing.Size(527, 19);
             this.txtMail.TabIndex = 9;
             // 
             // txtCorreo
@@ -135,7 +155,8 @@ namespace AdminRepartoApp
             this.txtCorreo.AutoSize = true;
             this.txtCorreo.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCorreo.ForeColor = System.Drawing.Color.Black;
-            this.txtCorreo.Location = new System.Drawing.Point(12, 244);
+            this.txtCorreo.Location = new System.Drawing.Point(16, 363);
+            this.txtCorreo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(271, 25);
             this.txtCorreo.TabIndex = 8;
@@ -143,9 +164,10 @@ namespace AdminRepartoApp
             // 
             // txtDPI
             // 
-            this.txtDPI.Location = new System.Drawing.Point(17, 335);
+            this.txtDPI.Location = new System.Drawing.Point(23, 475);
+            this.txtDPI.Margin = new System.Windows.Forms.Padding(4);
             this.txtDPI.Name = "txtDPI";
-            this.txtDPI.Size = new System.Drawing.Size(396, 20);
+            this.txtDPI.Size = new System.Drawing.Size(527, 19);
             this.txtDPI.TabIndex = 11;
             // 
             // lblDPI
@@ -153,7 +175,8 @@ namespace AdminRepartoApp
             this.lblDPI.AutoSize = true;
             this.lblDPI.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDPI.ForeColor = System.Drawing.Color.Black;
-            this.lblDPI.Location = new System.Drawing.Point(12, 307);
+            this.lblDPI.Location = new System.Drawing.Point(16, 441);
+            this.lblDPI.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDPI.Name = "lblDPI";
             this.lblDPI.Size = new System.Drawing.Size(244, 25);
             this.lblDPI.TabIndex = 10;
@@ -161,30 +184,169 @@ namespace AdminRepartoApp
             // 
             // btnRegisterCliente
             // 
-            this.btnRegisterCliente.Location = new System.Drawing.Point(136, 411);
+            this.btnRegisterCliente.Location = new System.Drawing.Point(992, 369);
+            this.btnRegisterCliente.Margin = new System.Windows.Forms.Padding(4);
             this.btnRegisterCliente.Name = "btnRegisterCliente";
-            this.btnRegisterCliente.Size = new System.Drawing.Size(171, 48);
+            this.btnRegisterCliente.Size = new System.Drawing.Size(146, 48);
             this.btnRegisterCliente.TabIndex = 12;
             this.btnRegisterCliente.Text = "Añadir Usuario";
             this.btnRegisterCliente.UseVisualStyleBackColor = true;
+            this.btnRegisterCliente.Click += new System.EventHandler(this.btnRegisterCliente_Click);
             // 
-            // lblConfirmacion
+            // txtPassword
             // 
-            this.lblConfirmacion.AutoSize = true;
-            this.lblConfirmacion.ForeColor = System.Drawing.Color.Red;
-            this.lblConfirmacion.Location = new System.Drawing.Point(144, 462);
-            this.lblConfirmacion.Name = "lblConfirmacion";
-            this.lblConfirmacion.Size = new System.Drawing.Size(165, 13);
-            this.lblConfirmacion.TabIndex = 13;
-            this.lblConfirmacion.Text = "Este usuario ya ha sido registrado";
-            this.lblConfirmacion.Visible = false;
+            this.txtPassword.Location = new System.Drawing.Point(23, 544);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(527, 19);
+            this.txtPassword.TabIndex = 15;
+            this.txtPassword.UseSystemPasswordChar = true;
+            // 
+            // lblContrasena
+            // 
+            this.lblContrasena.AutoSize = true;
+            this.lblContrasena.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContrasena.ForeColor = System.Drawing.Color.Black;
+            this.lblContrasena.Location = new System.Drawing.Point(16, 510);
+            this.lblContrasena.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblContrasena.Name = "lblContrasena";
+            this.lblContrasena.Size = new System.Drawing.Size(334, 25);
+            this.lblContrasena.TabIndex = 14;
+            this.lblContrasena.Text = "Establezca la contraseña del usuario:";
+            // 
+            // cmbHorarios
+            // 
+            this.cmbHorarios.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbHorarios.Items.AddRange(new object[] {
+            "07:00 - 16:00",
+            "08:00 - 17:00",
+            "17:00 - 02:00"});
+            this.cmbHorarios.Location = new System.Drawing.Point(748, 202);
+            this.cmbHorarios.Name = "cmbHorarios";
+            this.cmbHorarios.Size = new System.Drawing.Size(384, 21);
+            this.cmbHorarios.TabIndex = 16;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(742, 169);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(305, 25);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "Seleccione el horario del usuario:";
+            // 
+            // lblPermisos
+            // 
+            this.lblPermisos.AutoSize = true;
+            this.lblPermisos.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPermisos.ForeColor = System.Drawing.Color.Black;
+            this.lblPermisos.Location = new System.Drawing.Point(742, 252);
+            this.lblPermisos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPermisos.Name = "lblPermisos";
+            this.lblPermisos.Size = new System.Drawing.Size(91, 25);
+            this.lblPermisos.TabIndex = 18;
+            this.lblPermisos.Text = "Permisos";
+            // 
+            // chkEditarPermiso
+            // 
+            this.chkEditarPermiso.AutoSize = true;
+            this.chkEditarPermiso.Location = new System.Drawing.Point(748, 290);
+            this.chkEditarPermiso.Name = "chkEditarPermiso";
+            this.chkEditarPermiso.Size = new System.Drawing.Size(90, 17);
+            this.chkEditarPermiso.TabIndex = 19;
+            this.chkEditarPermiso.Text = "Permitir Editar";
+            this.chkEditarPermiso.UseVisualStyleBackColor = true;
+            // 
+            // chkEliminar
+            // 
+            this.chkEliminar.AutoSize = true;
+            this.chkEliminar.Location = new System.Drawing.Point(748, 317);
+            this.chkEliminar.Name = "chkEliminar";
+            this.chkEliminar.Size = new System.Drawing.Size(99, 17);
+            this.chkEliminar.TabIndex = 20;
+            this.chkEliminar.Text = "Permitir Eliminar";
+            this.chkEliminar.UseVisualStyleBackColor = true;
+            // 
+            // chkAnadir
+            // 
+            this.chkAnadir.AutoSize = true;
+            this.chkAnadir.Location = new System.Drawing.Point(748, 344);
+            this.chkAnadir.Name = "chkAnadir";
+            this.chkAnadir.Size = new System.Drawing.Size(177, 17);
+            this.chkAnadir.TabIndex = 21;
+            this.chkAnadir.Text = "Permitir Añadir Usuarios Nuevos";
+            this.chkAnadir.UseVisualStyleBackColor = true;
+            // 
+            // lblTipoUsuario
+            // 
+            this.lblTipoUsuario.AutoSize = true;
+            this.lblTipoUsuario.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTipoUsuario.ForeColor = System.Drawing.Color.Black;
+            this.lblTipoUsuario.Location = new System.Drawing.Point(742, 93);
+            this.lblTipoUsuario.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.lblTipoUsuario.Name = "lblTipoUsuario";
+            this.lblTipoUsuario.Size = new System.Drawing.Size(291, 25);
+            this.lblTipoUsuario.TabIndex = 23;
+            this.lblTipoUsuario.Text = "Seleccione el tipo de empleado:";
+            // 
+            // cmbTipoUsuario
+            // 
+            this.cmbTipoUsuario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTipoUsuario.Items.AddRange(new object[] {
+            "Administrador",
+            "Almacenero",
+            "Gerente",
+            "Piloto",
+            "Vendedor",
+            ""});
+            this.cmbTipoUsuario.Location = new System.Drawing.Point(748, 130);
+            this.cmbTipoUsuario.Name = "cmbTipoUsuario";
+            this.cmbTipoUsuario.Size = new System.Drawing.Size(384, 21);
+            this.cmbTipoUsuario.TabIndex = 22;
+            // 
+            // lblGenero
+            // 
+            this.lblGenero.AutoSize = true;
+            this.lblGenero.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGenero.ForeColor = System.Drawing.Color.Black;
+            this.lblGenero.Location = new System.Drawing.Point(19, 228);
+            this.lblGenero.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.lblGenero.Name = "lblGenero";
+            this.lblGenero.Size = new System.Drawing.Size(298, 25);
+            this.lblGenero.TabIndex = 25;
+            this.lblGenero.Text = "Seleccione el género del usuario";
+            // 
+            // cmbGenero
+            // 
+            this.cmbGenero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbGenero.Items.AddRange(new object[] {
+            "Femenino",
+            "Masculino"});
+            this.cmbGenero.Location = new System.Drawing.Point(23, 271);
+            this.cmbGenero.Name = "cmbGenero";
+            this.cmbGenero.Size = new System.Drawing.Size(527, 21);
+            this.cmbGenero.TabIndex = 24;
             // 
             // frmRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(442, 532);
-            this.Controls.Add(this.lblConfirmacion);
+            this.ClientSize = new System.Drawing.Size(1146, 584);
+            this.Controls.Add(this.lblGenero);
+            this.Controls.Add(this.cmbGenero);
+            this.Controls.Add(this.lblTipoUsuario);
+            this.Controls.Add(this.cmbTipoUsuario);
+            this.Controls.Add(this.chkAnadir);
+            this.Controls.Add(this.chkEliminar);
+            this.Controls.Add(this.chkEditarPermiso);
+            this.Controls.Add(this.lblPermisos);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.cmbHorarios);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.lblContrasena);
             this.Controls.Add(this.btnRegisterCliente);
             this.Controls.Add(this.txtDPI);
             this.Controls.Add(this.lblDPI);
@@ -197,8 +359,11 @@ namespace AdminRepartoApp
             this.Controls.Add(this.txtNombres);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.pnlMain);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmRegister";
+            this.Opacity = 0.97D;
             this.Text = "Añadir usuario";
             this.pnlMain.ResumeLayout(false);
             this.pnlMain.PerformLayout();
@@ -222,6 +387,17 @@ namespace AdminRepartoApp
         private System.Windows.Forms.TextBox txtDPI;
         private System.Windows.Forms.Label lblDPI;
         private System.Windows.Forms.Button btnRegisterCliente;
-        private System.Windows.Forms.Label lblConfirmacion;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.Label lblContrasena;
+        private System.Windows.Forms.ComboBox cmbHorarios;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblPermisos;
+        private System.Windows.Forms.CheckBox chkEditarPermiso;
+        private System.Windows.Forms.CheckBox chkEliminar;
+        private System.Windows.Forms.CheckBox chkAnadir;
+        private System.Windows.Forms.Label lblTipoUsuario;
+        private System.Windows.Forms.ComboBox cmbTipoUsuario;
+        private System.Windows.Forms.Label lblGenero;
+        private System.Windows.Forms.ComboBox cmbGenero;
     }
 }

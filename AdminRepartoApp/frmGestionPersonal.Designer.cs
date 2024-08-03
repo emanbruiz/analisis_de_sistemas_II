@@ -428,7 +428,9 @@ namespace AdminRepartoApp
             this.Controls.Add(this.cmbTipoPersonal);
             this.Controls.Add(this.lblBuscarPersonal);
             this.Controls.Add(this.pnlMain);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
             this.Name = "frmGestionPersonal";
             this.Text = "Gestión personal";
             this.Load += new System.EventHandler(this.frmGestionPersonal_Load);

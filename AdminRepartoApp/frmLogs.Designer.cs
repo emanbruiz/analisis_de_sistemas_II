@@ -61,7 +61,7 @@ namespace AdminRepartoApp
             this.lblRegister.Location = new System.Drawing.Point(5, 9);
             this.lblRegister.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblRegister.Name = "lblRegister";
-            this.lblRegister.Size = new System.Drawing.Size(136, 40);
+            this.lblRegister.Size = new System.Drawing.Size(109, 32);
             this.lblRegister.TabIndex = 0;
             this.lblRegister.Text = "Bitácora";
             // 
@@ -135,6 +135,7 @@ namespace AdminRepartoApp
             this.Controls.Add(this.cmbFiltrarEmpleado);
             this.Controls.Add(this.dgvLogs);
             this.Controls.Add(this.pnlMain);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.Name = "frmLogs";
             this.Text = "Bitácora";

@@ -443,6 +443,7 @@ namespace AdminRepartoApp
             this.Controls.Add(this.txtNombreProducto);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pnlMain);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "frmProducto";

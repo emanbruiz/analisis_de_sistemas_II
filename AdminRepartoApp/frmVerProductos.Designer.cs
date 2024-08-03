@@ -365,7 +365,7 @@ namespace AdminRepartoApp
             this.lblRegister.Location = new System.Drawing.Point(5, 11);
             this.lblRegister.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblRegister.Name = "lblRegister";
-            this.lblRegister.Size = new System.Drawing.Size(220, 40);
+            this.lblRegister.Size = new System.Drawing.Size(176, 32);
             this.lblRegister.TabIndex = 0;
             this.lblRegister.Text = "Ver Productos";
             // 
@@ -450,6 +450,8 @@ namespace AdminRepartoApp
             this.Controls.Add(this.txtNombreProducto);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pnlMain);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "frmVerProductos";
             this.Text = "frmVerProductos";
             this.Load += new System.EventHandler(this.frmVerProductos_Load);

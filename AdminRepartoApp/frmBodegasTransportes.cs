@@ -189,17 +189,20 @@ namespace AdminRepartoApp
             }
         }
 
-        private void btnAsignarPiloto_Click(object sender, EventArgs e)
+        private void btnGuardarEnvio_Click(object sender, EventArgs e)
         {
-            if (cmbBuscarPedidoNoAsignado.SelectedItem == null || cmbBuscarPiloto.SelectedItem == null)
+            if (cmbBuscarPedidoNoAsignado.SelectedItem == null || cmbBuscarPiloto.SelectedItem == null || string.IsNullOrEmpty(txtDireccionEntrega.Text) || string.IsNullOrEmpty(txtDireccionRecoleccion.Text) || cmbEstadoEnvio.SelectedItem == null)
             {
-                MessageBox.Show("Por favor, seleccione un pedido y un piloto.");
+                MessageBox.Show("Por favor, complete todos los campos del envío y seleccione un piloto.");
                 return;
             }
 
             string noFactura = cmbBuscarPedidoNoAsignado.SelectedItem.ToString();
             ComboBoxItem selectedPiloto = (ComboBoxItem)cmbBuscarPiloto.SelectedItem;
             string idPiloto = selectedPiloto.Value;
+            string direccionEntrega = txtDireccionEntrega.Text;
+            string direccionRecoleccion = txtDireccionRecoleccion.Text;
+            string estadoEnvio = cmbEstadoEnvio.SelectedItem.ToString();
             string connectionString = "Server=127.0.0.1;Database=comercioelectronico;Uid=root;Pwd=161101;";
 
             using (MySqlConnection connection = new MySqlConnection(connectionString))
@@ -215,52 +218,24 @@ namespace AdminRepartoApp
                     cmdPedido.Parameters.AddWithValue("@noFactura", noFactura);
 
                     cmdPedido.ExecuteNonQuery();
-                    MessageBox.Show("Pedido asignado exitosamente.");
-                    CargarComboboxPedidosNoAsignados(); // Recargar los pedidos sin asignar
-                }
-                catch (MySqlException ex)
-                {
-                    MessageBox.Show("Error al asignar el pedido: " + ex.Message);
-                }
-            }
-        }
-
-        private void btnGuardarEnvio_Click(object sender, EventArgs e)
-        {
-            if (cmbBuscarPedidoNoAsignado.SelectedItem == null || string.IsNullOrEmpty(txtDireccionEntrega.Text) || string.IsNullOrEmpty(txtDireccionRecoleccion.Text) || cmbEstadoEnvio.SelectedItem == null)
-            {
-                MessageBox.Show("Por favor, complete todos los campos del envío.");
-                return;
-            }
-
-            string noFactura = cmbBuscarPedidoNoAsignado.SelectedItem.ToString();
-            string direccionEntrega = txtDireccionEntrega.Text;
-            string direccionRecoleccion = txtDireccionRecoleccion.Text;
-            string estadoEnvio = cmbEstadoEnvio.SelectedItem.ToString();
-            string connectionString = "Server=127.0.0.1;Database=comercioelectronico;Uid=root;Pwd=161101;";
-
-            using (MySqlConnection connection = new MySqlConnection(connectionString))
-            {
-                try
-                {
-                    connection.Open();
 
                     // Insertar el envío
                     string queryEnvio = @"
                         INSERT INTO Envio (ID_Pedido, Direccion_Entrega, Direccion_Recolecta, Estado_Envio)
                         VALUES ((SELECT ID_Pedido FROM Pedido WHERE No_Factura = @noFactura), @direccionEntrega, @direccionRecoleccion, @estadoEnvio)";
-                    MySqlCommand cmd = new MySqlCommand(queryEnvio, connection);
-                    cmd.Parameters.AddWithValue("@noFactura", noFactura);
-                    cmd.Parameters.AddWithValue("@direccionEntrega", direccionEntrega);
-                    cmd.Parameters.AddWithValue("@direccionRecoleccion", direccionRecoleccion);
-                    cmd.Parameters.AddWithValue("@estadoEnvio", estadoEnvio);
+                    MySqlCommand cmdEnvio = new MySqlCommand(queryEnvio, connection);
+                    cmdEnvio.Parameters.AddWithValue("@noFactura", noFactura);
+                    cmdEnvio.Parameters.AddWithValue("@direccionEntrega", direccionEntrega);
+                    cmdEnvio.Parameters.AddWithValue("@direccionRecoleccion", direccionRecoleccion);
+                    cmdEnvio.Parameters.AddWithValue("@estadoEnvio", estadoEnvio);
 
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Envío guardado exitosamente.");
+                    cmdEnvio.ExecuteNonQuery();
+                    MessageBox.Show("Pedido asignado y envío guardado exitosamente.");
+                    CargarComboboxPedidosNoAsignados(); // Recargar los pedidos sin asignar
                 }
                 catch (MySqlException ex)
                 {
-                    MessageBox.Show("Error al guardar el envío: " + ex.Message);
+                    MessageBox.Show("Error al asignar el pedido o guardar el envío: " + ex.Message);
                 }
             }
         }

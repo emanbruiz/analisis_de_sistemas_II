@@ -30,7 +30,6 @@ namespace AdminRepartoApp
         {
             lblUsuarioIniciado.Text = usuarioCorreo;
             timerFechaHora.Start();
-            btnRoles.Enabled = permitirEditar;  // Habilitar o deshabilitar el botón según los permisos
             btnLogs.Visible = esAdministrador; // Mostrar el botón de logs solo para administradores
         }
 
@@ -55,13 +54,6 @@ namespace AdminRepartoApp
         {
             frmRegister registerForm = new frmRegister();
             registerForm.Show();
-        }
-
-        private void btnRoles_Click(object sender, EventArgs e)
-        {
-            // Pasar el ID del empleado al formulario de roles
-            frmRoles rolesForm = new frmRoles(idEmpleado);
-            rolesForm.Show();
         }
 
         private void btnActualizarDatosUsuarios_Click(object sender, EventArgs e)

@@ -11,6 +11,24 @@ namespace AdminRepartoApp
             InitializeComponent();
             HabilitarCamposCliente(false);
             HabilitarCamposPiloto(false);
+            DesactivarBotonesIniciales();
+        }
+
+        private void DesactivarBotonesIniciales()
+        {
+            btnVerClientes.Enabled = false;
+            btnGuardarCliente.Enabled = false;
+            btnCancelarCliente.Enabled = false;
+
+            btnVerPilotos.Enabled = false;
+            btnGuardarPiloto.Enabled = false;
+            btnCancelarPiloto.Enabled = false;
+
+            btnActualizarCliente.Enabled = false;
+            btnEliminarCliente.Enabled = false;
+
+            btnActualizarPiloto.Enabled = false;
+            btnEliminarPiloto.Enabled = false;
         }
 
         private void frmClientesPilotos_Load(object sender, EventArgs e)
@@ -73,7 +91,10 @@ namespace AdminRepartoApp
         private void cmbBuscarCliente_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cmbBuscarCliente.SelectedItem == null)
+            {
+                HabilitarBotonesCliente(false);
                 return;
+            }
 
             // Obtener el correo seleccionado
             string correo = cmbBuscarCliente.SelectedItem.ToString();
@@ -105,6 +126,7 @@ namespace AdminRepartoApp
                         txtCalificacionCliente.Text = reader["PromedioCalificaciones"].ToString();
 
                         HabilitarCamposCliente(true);
+                        HabilitarBotonesCliente(true);
                     }
                     reader.Close();
                 }
@@ -118,7 +140,10 @@ namespace AdminRepartoApp
         private void cmbBuscarPiloto_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             if (cmbBuscarPiloto.SelectedItem == null)
+            {
+                HabilitarBotonesPiloto(false);
                 return;
+            }
 
             // Obtener el correo seleccionado
             string correo = cmbBuscarPiloto.SelectedItem.ToString();
@@ -150,6 +175,7 @@ namespace AdminRepartoApp
                         txtCalificacionPiloto.Text = reader["PromedioCalificaciones"].ToString();
 
                         HabilitarCamposPiloto(true);
+                        HabilitarBotonesPiloto(true);
                     }
                     reader.Close();
                 }
@@ -164,12 +190,20 @@ namespace AdminRepartoApp
         {
             HabilitarCamposCliente(true);
             LimpiarCamposCliente();
+            btnVerClientes.Enabled = true;
+            btnGuardarCliente.Enabled = true;
+            btnCancelarCliente.Enabled = true;
+            HabilitarBotonesCliente(false);
         }
 
         private void btnAgregarPiloto_Click(object sender, EventArgs e)
         {
             HabilitarCamposPiloto(true);
             LimpiarCamposPiloto();
+            btnVerPilotos.Enabled = true;
+            btnGuardarPiloto.Enabled = true;
+            btnCancelarPiloto.Enabled = true;
+            HabilitarBotonesPiloto(false);
         }
 
         private void btnGuardarCliente_Click(object sender, EventArgs e)
@@ -211,6 +245,7 @@ namespace AdminRepartoApp
                     MessageBox.Show("Cliente guardado exitosamente.");
                     LimpiarCamposCliente();
                     HabilitarCamposCliente(false);
+                    DesactivarBotonesIniciales();
                 }
                 catch (MySqlException ex)
                 {
@@ -258,6 +293,7 @@ namespace AdminRepartoApp
                     MessageBox.Show("Piloto guardado exitosamente.");
                     LimpiarCamposPiloto();
                     HabilitarCamposPiloto(false);
+                    DesactivarBotonesIniciales();
                 }
                 catch (MySqlException ex)
                 {
@@ -276,10 +312,6 @@ namespace AdminRepartoApp
             txtDPICliente.Enabled = habilitar;
             txtTelefonoCliente.Enabled = habilitar;
             txtCalificacionCliente.Enabled = habilitar;
-            btnActualizarCliente.Enabled = habilitar;
-            btnEliminarCliente.Enabled = habilitar;
-            btnCancelarCliente.Enabled = habilitar;
-            btnGuardarCliente.Enabled = habilitar;
         }
 
         private void HabilitarCamposPiloto(bool habilitar)
@@ -292,10 +324,6 @@ namespace AdminRepartoApp
             txtDPIPiloto.Enabled = habilitar;
             txtTelefonoPiloto.Enabled = habilitar;
             txtCalificacionPiloto.Enabled = habilitar;
-            btnActualizarPiloto.Enabled = habilitar;
-            btnEliminarPiloto.Enabled = habilitar;
-            btnCancelarPiloto.Enabled = habilitar;
-            btnGuardarPiloto.Enabled = habilitar;
         }
 
         private void LimpiarCamposCliente()
@@ -402,6 +430,7 @@ namespace AdminRepartoApp
                     MessageBox.Show("Cliente actualizado exitosamente.");
                     LimpiarCamposCliente();
                     HabilitarCamposCliente(false);
+                    HabilitarBotonesCliente(false);
                 }
                 catch (MySqlException ex)
                 {
@@ -450,6 +479,7 @@ namespace AdminRepartoApp
                     MessageBox.Show("Piloto actualizado exitosamente.");
                     LimpiarCamposPiloto();
                     HabilitarCamposPiloto(false);
+                    HabilitarBotonesPiloto(false);
                 }
                 catch (MySqlException ex)
                 {
@@ -487,6 +517,7 @@ namespace AdminRepartoApp
                             cmbBuscarCliente.Items.Remove(correo);
                             LimpiarCamposCliente();
                             HabilitarCamposCliente(false);
+                            HabilitarBotonesCliente(false);
                         }
                         else
                         {
@@ -530,6 +561,7 @@ namespace AdminRepartoApp
                             cmbBuscarPiloto.Items.Remove(correo);
                             LimpiarCamposPiloto();
                             HabilitarCamposPiloto(false);
+                            HabilitarBotonesPiloto(false);
                         }
                         else
                         {
@@ -548,12 +580,14 @@ namespace AdminRepartoApp
         {
             LimpiarCamposCliente();
             HabilitarCamposCliente(false);
+            DesactivarBotonesIniciales();
         }
 
         private void btnCancelarPiloto_Click_1(object sender, EventArgs e)
         {
             LimpiarCamposPiloto();
             HabilitarCamposPiloto(false);
+            DesactivarBotonesIniciales();
         }
 
         private void btnVerClientes_Click(object sender, EventArgs e)
@@ -606,6 +640,18 @@ namespace AdminRepartoApp
                     MessageBox.Show("Error al cargar datos de pilotos: " + ex.Message);
                 }
             }
+        }
+
+        private void HabilitarBotonesCliente(bool habilitar)
+        {
+            btnActualizarCliente.Enabled = habilitar;
+            btnEliminarCliente.Enabled = habilitar;
+        }
+
+        private void HabilitarBotonesPiloto(bool habilitar)
+        {
+            btnActualizarPiloto.Enabled = habilitar;
+            btnEliminarPiloto.Enabled = habilitar;
         }
     }
 }

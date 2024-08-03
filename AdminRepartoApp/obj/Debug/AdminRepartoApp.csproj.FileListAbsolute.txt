@@ -43,10 +43,8 @@ C:\Users\DELL-PC\source\repos\AdminRepartoApp\bin\Debug\System.Runtime.CompilerS
 C:\Users\DELL-PC\source\repos\AdminRepartoApp\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\DELL-PC\source\repos\AdminRepartoApp\obj\Debug\AdminRepartoApp.csproj.AssemblyReference.cache
 C:\Users\DELL-PC\source\repos\AdminRepartoApp\obj\Debug\AdminRepartoApp.csproj.CopyComplete
-C:\Users\DELL-PC\source\repos\AdminRepartoApp\obj\Debug\AdminRepartoApp.frmRoles.resources
 C:\Users\DELL-PC\source\repos\AdminRepartoApp\obj\Debug\AdminRepartoApp.frmUpdate.resources
 C:\Users\DELL-PC\source\repos\AdminRepartoApp\obj\Debug\AdminRepartoApp.frmProducto.resources
-C:\Users\DELL-PC\source\repos\AdminRepartoApp\obj\Debug\AdminRepartoApp.frmRecover.resources
 C:\Users\DELL-PC\source\repos\AdminRepartoApp\obj\Debug\AdminRepartoApp.frmVerProductos.resources
 C:\Users\DELL-PC\source\repos\AdminRepartoApp\obj\Debug\AdminRepartoApp.frmLogs.resources
 C:\Users\DELL-PC\source\repos\AdminRepartoApp\obj\Debug\AdminRepartoApp.frmGestionPersonal.resources

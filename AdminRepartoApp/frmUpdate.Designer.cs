@@ -69,7 +69,7 @@ namespace AdminRepartoApp
             this.btnCargarDatos.Enabled = false;
             this.btnCargarDatos.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCargarDatos.Location = new System.Drawing.Point(441, 121);
-            this.btnCargarDatos.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnCargarDatos.Margin = new System.Windows.Forms.Padding(5);
             this.btnCargarDatos.Name = "btnCargarDatos";
             this.btnCargarDatos.Size = new System.Drawing.Size(128, 48);
             this.btnCargarDatos.TabIndex = 84;
@@ -82,7 +82,7 @@ namespace AdminRepartoApp
             this.cmbUsuarios.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbUsuarios.FormattingEnabled = true;
             this.cmbUsuarios.Location = new System.Drawing.Point(31, 143);
-            this.cmbUsuarios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbUsuarios.Margin = new System.Windows.Forms.Padding(4);
             this.cmbUsuarios.Name = "cmbUsuarios";
             this.cmbUsuarios.Size = new System.Drawing.Size(256, 24);
             this.cmbUsuarios.TabIndex = 83;
@@ -92,7 +92,7 @@ namespace AdminRepartoApp
             this.btnCargar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(179)))), ((int)(((byte)(241)))));
             this.btnCargar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCargar.Location = new System.Drawing.Point(303, 121);
-            this.btnCargar.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnCargar.Margin = new System.Windows.Forms.Padding(5);
             this.btnCargar.Name = "btnCargar";
             this.btnCargar.Size = new System.Drawing.Size(128, 48);
             this.btnCargar.TabIndex = 82;
@@ -131,7 +131,7 @@ namespace AdminRepartoApp
             "Femenino",
             "Masculino"});
             this.cmbGenero.Location = new System.Drawing.Point(29, 383);
-            this.cmbGenero.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbGenero.Margin = new System.Windows.Forms.Padding(4);
             this.cmbGenero.Name = "cmbGenero";
             this.cmbGenero.Size = new System.Drawing.Size(701, 24);
             this.cmbGenero.TabIndex = 79;
@@ -159,7 +159,7 @@ namespace AdminRepartoApp
             "Vendedor",
             ""});
             this.cmbTipoUsuario.Location = new System.Drawing.Point(996, 209);
-            this.cmbTipoUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbTipoUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.cmbTipoUsuario.Name = "cmbTipoUsuario";
             this.cmbTipoUsuario.Size = new System.Drawing.Size(511, 24);
             this.cmbTipoUsuario.TabIndex = 77;
@@ -168,7 +168,7 @@ namespace AdminRepartoApp
             // 
             this.chkAnadir.AutoSize = true;
             this.chkAnadir.Location = new System.Drawing.Point(996, 473);
-            this.chkAnadir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkAnadir.Margin = new System.Windows.Forms.Padding(4);
             this.chkAnadir.Name = "chkAnadir";
             this.chkAnadir.Size = new System.Drawing.Size(235, 21);
             this.chkAnadir.TabIndex = 76;
@@ -179,7 +179,7 @@ namespace AdminRepartoApp
             // 
             this.chkEliminar.AutoSize = true;
             this.chkEliminar.Location = new System.Drawing.Point(996, 439);
-            this.chkEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.chkEliminar.Name = "chkEliminar";
             this.chkEliminar.Size = new System.Drawing.Size(132, 21);
             this.chkEliminar.TabIndex = 75;
@@ -190,7 +190,7 @@ namespace AdminRepartoApp
             // 
             this.chkEditarPermiso.AutoSize = true;
             this.chkEditarPermiso.Location = new System.Drawing.Point(996, 406);
-            this.chkEditarPermiso.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkEditarPermiso.Margin = new System.Windows.Forms.Padding(4);
             this.chkEditarPermiso.Name = "chkEditarPermiso";
             this.chkEditarPermiso.Size = new System.Drawing.Size(119, 21);
             this.chkEditarPermiso.TabIndex = 74;
@@ -229,7 +229,7 @@ namespace AdminRepartoApp
             "08:00 - 17:00",
             "17:00 - 02:00"});
             this.cmbHorarios.Location = new System.Drawing.Point(996, 298);
-            this.cmbHorarios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbHorarios.Margin = new System.Windows.Forms.Padding(4);
             this.cmbHorarios.Name = "cmbHorarios";
             this.cmbHorarios.Size = new System.Drawing.Size(511, 24);
             this.cmbHorarios.TabIndex = 71;
@@ -237,7 +237,7 @@ namespace AdminRepartoApp
             // txtPassword
             // 
             this.txtPassword.Location = new System.Drawing.Point(27, 725);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(5);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(701, 22);
             this.txtPassword.TabIndex = 70;
@@ -260,7 +260,7 @@ namespace AdminRepartoApp
             this.btnActualizarUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(179)))), ((int)(((byte)(241)))));
             this.btnActualizarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnActualizarUsuario.Location = new System.Drawing.Point(1321, 503);
-            this.btnActualizarUsuario.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnActualizarUsuario.Margin = new System.Windows.Forms.Padding(5);
             this.btnActualizarUsuario.Name = "btnActualizarUsuario";
             this.btnActualizarUsuario.Size = new System.Drawing.Size(195, 59);
             this.btnActualizarUsuario.TabIndex = 68;
@@ -271,7 +271,7 @@ namespace AdminRepartoApp
             // txtDPI
             // 
             this.txtDPI.Location = new System.Drawing.Point(29, 634);
-            this.txtDPI.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtDPI.Margin = new System.Windows.Forms.Padding(5);
             this.txtDPI.Name = "txtDPI";
             this.txtDPI.Size = new System.Drawing.Size(701, 22);
             this.txtDPI.TabIndex = 67;
@@ -291,7 +291,7 @@ namespace AdminRepartoApp
             // txtMail
             // 
             this.txtMail.Location = new System.Drawing.Point(29, 539);
-            this.txtMail.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtMail.Margin = new System.Windows.Forms.Padding(5);
             this.txtMail.Name = "txtMail";
             this.txtMail.Size = new System.Drawing.Size(701, 22);
             this.txtMail.TabIndex = 65;
@@ -311,7 +311,7 @@ namespace AdminRepartoApp
             // txtDireccion
             // 
             this.txtDireccion.Location = new System.Drawing.Point(29, 453);
-            this.txtDireccion.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtDireccion.Margin = new System.Windows.Forms.Padding(5);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(701, 22);
             this.txtDireccion.TabIndex = 63;
@@ -331,7 +331,7 @@ namespace AdminRepartoApp
             // txtApellidos
             // 
             this.txtApellidos.Location = new System.Drawing.Point(29, 298);
-            this.txtApellidos.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtApellidos.Margin = new System.Windows.Forms.Padding(5);
             this.txtApellidos.Name = "txtApellidos";
             this.txtApellidos.Size = new System.Drawing.Size(701, 22);
             this.txtApellidos.TabIndex = 61;
@@ -351,7 +351,7 @@ namespace AdminRepartoApp
             // txtNombres
             // 
             this.txtNombres.Location = new System.Drawing.Point(29, 214);
-            this.txtNombres.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtNombres.Margin = new System.Windows.Forms.Padding(5);
             this.txtNombres.Name = "txtNombres";
             this.txtNombres.Size = new System.Drawing.Size(701, 22);
             this.txtNombres.TabIndex = 59;
@@ -375,7 +375,7 @@ namespace AdminRepartoApp
             this.pnlMain.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlMain.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.pnlMain.Location = new System.Drawing.Point(0, 0);
-            this.pnlMain.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.pnlMain.Margin = new System.Windows.Forms.Padding(5);
             this.pnlMain.Name = "pnlMain";
             this.pnlMain.Size = new System.Drawing.Size(1533, 80);
             this.pnlMain.TabIndex = 57;
@@ -439,8 +439,10 @@ namespace AdminRepartoApp
             this.Controls.Add(this.txtNombres);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.pnlMain);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
             this.Name = "frmUpdate";
             this.Text = "Actualizar Datos del Usuario";
             this.Load += new System.EventHandler(this.frmUpdate_Load);

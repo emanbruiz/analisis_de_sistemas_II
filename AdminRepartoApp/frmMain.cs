@@ -168,5 +168,57 @@ namespace AdminRepartoApp
             }
         }
 
+        private void btnGestionPedidos_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frmGestionPedidos gestionPedidosForm = new frmGestionPedidos();
+                gestionPedidosForm.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al abrir el formulario de Gestión de Pedidos: " + ex.Message);
+            }
+        }
+
+        private void btnReportesPersonal_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frmReportesPersonal reportesPersonalForm = new frmReportesPersonal();
+                reportesPersonalForm.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al abrir el formulario de Gestión de Pedidos: " + ex.Message);
+            }
+        }
+
+        private void btnReportesBodegasTransportes_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frmReportesBodegasTransportes reportesBodegasTransportesForm = new frmReportesBodegasTransportes();
+                reportesBodegasTransportesForm.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al abrir el formulario de Reportes de Bodegas y Transportes: " + ex.Message);
+            }
+        }
+
+        private void btnBodegasTransportes_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frmBodegasTransportes bodegasTransportesForm = new frmBodegasTransportes();
+                bodegasTransportesForm.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al abrir el formulario de Bodegas y Transportes: " + ex.Message);
+            }
+        }
+
     }
 }

@@ -300,8 +300,7 @@ namespace AdminRepartoApp
             "Almacenero",
             "Gerente",
             "Piloto",
-            "Vendedor",
-            ""});
+            "Vendedor"});
             this.cmbTipoUsuario.Location = new System.Drawing.Point(748, 130);
             this.cmbTipoUsuario.Name = "cmbTipoUsuario";
             this.cmbTipoUsuario.Size = new System.Drawing.Size(384, 21);

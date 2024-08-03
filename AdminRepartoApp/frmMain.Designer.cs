@@ -67,9 +67,8 @@ namespace AdminRepartoApp
             this.pnlMain.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlMain.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.pnlMain.Location = new System.Drawing.Point(0, 0);
-            this.pnlMain.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Size = new System.Drawing.Size(1067, 73);
+            this.pnlMain.Size = new System.Drawing.Size(800, 59);
             this.pnlMain.TabIndex = 2;
             // 
             // gbxBotones
@@ -81,11 +80,9 @@ namespace AdminRepartoApp
             this.gbxBotones.Controls.Add(this.btnNuevosUsuarios);
             this.gbxBotones.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbxBotones.ForeColor = System.Drawing.Color.White;
-            this.gbxBotones.Location = new System.Drawing.Point(100, 0);
-            this.gbxBotones.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxBotones.Location = new System.Drawing.Point(75, 0);
             this.gbxBotones.Name = "gbxBotones";
-            this.gbxBotones.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.gbxBotones.Size = new System.Drawing.Size(809, 73);
+            this.gbxBotones.Size = new System.Drawing.Size(607, 59);
             this.gbxBotones.TabIndex = 6;
             this.gbxBotones.TabStop = false;
             this.gbxBotones.Text = "Opciones";
@@ -93,10 +90,9 @@ namespace AdminRepartoApp
             // btnLogs
             // 
             this.btnLogs.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnLogs.Location = new System.Drawing.Point(705, 27);
-            this.btnLogs.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLogs.Location = new System.Drawing.Point(538, 22);
             this.btnLogs.Name = "btnLogs";
-            this.btnLogs.Size = new System.Drawing.Size(96, 28);
+            this.btnLogs.Size = new System.Drawing.Size(63, 23);
             this.btnLogs.TabIndex = 4;
             this.btnLogs.Text = "Logs";
             this.btnLogs.UseVisualStyleBackColor = true;
@@ -106,10 +102,9 @@ namespace AdminRepartoApp
             // btnProductos
             // 
             this.btnProductos.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnProductos.Location = new System.Drawing.Point(551, 27);
-            this.btnProductos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnProductos.Location = new System.Drawing.Point(413, 22);
             this.btnProductos.Name = "btnProductos";
-            this.btnProductos.Size = new System.Drawing.Size(147, 28);
+            this.btnProductos.Size = new System.Drawing.Size(119, 23);
             this.btnProductos.TabIndex = 3;
             this.btnProductos.Text = "Añadir Productos";
             this.btnProductos.UseVisualStyleBackColor = true;
@@ -118,10 +113,9 @@ namespace AdminRepartoApp
             // btnActualizarDatosUsuarios
             // 
             this.btnActualizarDatosUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnActualizarDatosUsuarios.Location = new System.Drawing.Point(333, 27);
-            this.btnActualizarDatosUsuarios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnActualizarDatosUsuarios.Location = new System.Drawing.Point(250, 22);
             this.btnActualizarDatosUsuarios.Name = "btnActualizarDatosUsuarios";
-            this.btnActualizarDatosUsuarios.Size = new System.Drawing.Size(209, 28);
+            this.btnActualizarDatosUsuarios.Size = new System.Drawing.Size(157, 23);
             this.btnActualizarDatosUsuarios.TabIndex = 2;
             this.btnActualizarDatosUsuarios.Text = "Actualizar Datos Usuario";
             this.btnActualizarDatosUsuarios.UseVisualStyleBackColor = true;
@@ -131,10 +125,9 @@ namespace AdminRepartoApp
             // 
             this.btnRoles.Enabled = false;
             this.btnRoles.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnRoles.Location = new System.Drawing.Point(173, 27);
-            this.btnRoles.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRoles.Location = new System.Drawing.Point(130, 22);
             this.btnRoles.Name = "btnRoles";
-            this.btnRoles.Size = new System.Drawing.Size(152, 28);
+            this.btnRoles.Size = new System.Drawing.Size(114, 23);
             this.btnRoles.TabIndex = 1;
             this.btnRoles.Text = "Gestionar Roles";
             this.btnRoles.UseVisualStyleBackColor = true;
@@ -143,10 +136,9 @@ namespace AdminRepartoApp
             // btnNuevosUsuarios
             // 
             this.btnNuevosUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnNuevosUsuarios.Location = new System.Drawing.Point(13, 27);
-            this.btnNuevosUsuarios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnNuevosUsuarios.Location = new System.Drawing.Point(10, 22);
             this.btnNuevosUsuarios.Name = "btnNuevosUsuarios";
-            this.btnNuevosUsuarios.Size = new System.Drawing.Size(152, 28);
+            this.btnNuevosUsuarios.Size = new System.Drawing.Size(114, 23);
             this.btnNuevosUsuarios.TabIndex = 0;
             this.btnNuevosUsuarios.Text = "Registrar Usuario";
             this.btnNuevosUsuarios.UseVisualStyleBackColor = true;
@@ -159,10 +151,10 @@ namespace AdminRepartoApp
             this.btnCerrarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrarSesion.ForeColor = System.Drawing.Color.Red;
             this.btnCerrarSesion.Image = global::AdminRepartoApp.Properties.Resources.cerrar_sesion__1_;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(920, 27);
-            this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(690, 22);
+            this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(2);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Size = new System.Drawing.Size(147, 31);
+            this.btnCerrarSesion.Size = new System.Drawing.Size(110, 25);
             this.btnCerrarSesion.TabIndex = 1;
             this.btnCerrarSesion.Text = "Cerrar Sesión";
             this.btnCerrarSesion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -174,10 +166,9 @@ namespace AdminRepartoApp
             this.lblMain.AutoSize = true;
             this.lblMain.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMain.ForeColor = System.Drawing.Color.White;
-            this.lblMain.Location = new System.Drawing.Point(16, 22);
-            this.lblMain.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblMain.Location = new System.Drawing.Point(12, 18);
             this.lblMain.Name = "lblMain";
-            this.lblMain.Size = new System.Drawing.Size(81, 32);
+            this.lblMain.Size = new System.Drawing.Size(64, 25);
             this.lblMain.TabIndex = 0;
             this.lblMain.Text = "Menú";
             this.lblMain.Click += new System.EventHandler(this.lblRegister_Click);
@@ -186,10 +177,9 @@ namespace AdminRepartoApp
             // 
             this.txtInformativo.AutoSize = true;
             this.txtInformativo.ForeColor = System.Drawing.Color.Black;
-            this.txtInformativo.Location = new System.Drawing.Point(4, 76);
-            this.txtInformativo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.txtInformativo.Location = new System.Drawing.Point(3, 62);
             this.txtInformativo.Name = "txtInformativo";
-            this.txtInformativo.Size = new System.Drawing.Size(145, 17);
+            this.txtInformativo.Size = new System.Drawing.Size(110, 13);
             this.txtInformativo.TabIndex = 3;
             this.txtInformativo.Text = "Sesión iniciada como:";
             // 
@@ -197,10 +187,9 @@ namespace AdminRepartoApp
             // 
             this.lblUsuarioMain.AutoSize = true;
             this.lblUsuarioMain.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuarioMain.Location = new System.Drawing.Point(147, 76);
-            this.lblUsuarioMain.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblUsuarioMain.Location = new System.Drawing.Point(110, 62);
             this.lblUsuarioMain.Name = "lblUsuarioMain";
-            this.lblUsuarioMain.Size = new System.Drawing.Size(0, 17);
+            this.lblUsuarioMain.Size = new System.Drawing.Size(0, 13);
             this.lblUsuarioMain.TabIndex = 4;
             // 
             // lblUsuarioIniciado
@@ -208,10 +197,9 @@ namespace AdminRepartoApp
             this.lblUsuarioIniciado.AutoSize = true;
             this.lblUsuarioIniciado.BackColor = System.Drawing.Color.White;
             this.lblUsuarioIniciado.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuarioIniciado.Location = new System.Drawing.Point(147, 76);
-            this.lblUsuarioIniciado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblUsuarioIniciado.Location = new System.Drawing.Point(110, 62);
             this.lblUsuarioIniciado.Name = "lblUsuarioIniciado";
-            this.lblUsuarioIniciado.Size = new System.Drawing.Size(64, 17);
+            this.lblUsuarioIniciado.Size = new System.Drawing.Size(50, 13);
             this.lblUsuarioIniciado.TabIndex = 5;
             this.lblUsuarioIniciado.Text = "Usuario";
             // 
@@ -225,20 +213,18 @@ namespace AdminRepartoApp
             this.panel1.Controls.Add(this.btnBodegasTransportes);
             this.panel1.Controls.Add(this.btnGestionPersonal);
             this.panel1.Controls.Add(this.btnReportesPersonal);
-            this.panel1.Location = new System.Drawing.Point(0, 135);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Location = new System.Drawing.Point(0, 110);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(228, 373);
+            this.panel1.Size = new System.Drawing.Size(171, 303);
             this.panel1.TabIndex = 6;
             // 
             // btnClientesPilotos
             // 
             this.btnClientesPilotos.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnClientesPilotos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClientesPilotos.Location = new System.Drawing.Point(4, 330);
-            this.btnClientesPilotos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnClientesPilotos.Location = new System.Drawing.Point(3, 268);
             this.btnClientesPilotos.Name = "btnClientesPilotos";
-            this.btnClientesPilotos.Size = new System.Drawing.Size(215, 28);
+            this.btnClientesPilotos.Size = new System.Drawing.Size(161, 23);
             this.btnClientesPilotos.TabIndex = 12;
             this.btnClientesPilotos.Text = "Clientes y Pilotos";
             this.btnClientesPilotos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -249,10 +235,9 @@ namespace AdminRepartoApp
             // 
             this.btnVerProductos.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnVerProductos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVerProductos.Location = new System.Drawing.Point(5, 10);
-            this.btnVerProductos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnVerProductos.Location = new System.Drawing.Point(4, 8);
             this.btnVerProductos.Name = "btnVerProductos";
-            this.btnVerProductos.Size = new System.Drawing.Size(215, 28);
+            this.btnVerProductos.Size = new System.Drawing.Size(161, 23);
             this.btnVerProductos.TabIndex = 6;
             this.btnVerProductos.Text = "Ver Productos";
             this.btnVerProductos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -263,46 +248,45 @@ namespace AdminRepartoApp
             // 
             this.btnGestionPedidos.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnGestionPedidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGestionPedidos.Location = new System.Drawing.Point(4, 278);
-            this.btnGestionPedidos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGestionPedidos.Location = new System.Drawing.Point(3, 226);
             this.btnGestionPedidos.Name = "btnGestionPedidos";
-            this.btnGestionPedidos.Size = new System.Drawing.Size(215, 28);
+            this.btnGestionPedidos.Size = new System.Drawing.Size(161, 23);
             this.btnGestionPedidos.TabIndex = 11;
             this.btnGestionPedidos.Text = "Gestión Pedidos";
             this.btnGestionPedidos.UseVisualStyleBackColor = true;
+            this.btnGestionPedidos.Click += new System.EventHandler(this.btnGestionPedidos_Click);
             // 
             // btnReportesBodegasTransportes
             // 
             this.btnReportesBodegasTransportes.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnReportesBodegasTransportes.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReportesBodegasTransportes.Location = new System.Drawing.Point(5, 214);
-            this.btnReportesBodegasTransportes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnReportesBodegasTransportes.Location = new System.Drawing.Point(4, 174);
             this.btnReportesBodegasTransportes.Name = "btnReportesBodegasTransportes";
-            this.btnReportesBodegasTransportes.Size = new System.Drawing.Size(215, 44);
+            this.btnReportesBodegasTransportes.Size = new System.Drawing.Size(161, 36);
             this.btnReportesBodegasTransportes.TabIndex = 10;
             this.btnReportesBodegasTransportes.Text = "Reportes Bodegas y Trasportes";
             this.btnReportesBodegasTransportes.UseVisualStyleBackColor = true;
+            this.btnReportesBodegasTransportes.Click += new System.EventHandler(this.btnReportesBodegasTransportes_Click);
             // 
             // btnBodegasTransportes
             // 
             this.btnBodegasTransportes.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnBodegasTransportes.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBodegasTransportes.Location = new System.Drawing.Point(3, 170);
-            this.btnBodegasTransportes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBodegasTransportes.Location = new System.Drawing.Point(2, 138);
             this.btnBodegasTransportes.Name = "btnBodegasTransportes";
-            this.btnBodegasTransportes.Size = new System.Drawing.Size(215, 28);
+            this.btnBodegasTransportes.Size = new System.Drawing.Size(161, 23);
             this.btnBodegasTransportes.TabIndex = 9;
             this.btnBodegasTransportes.Text = "Bodegas y Transportes";
             this.btnBodegasTransportes.UseVisualStyleBackColor = true;
+            this.btnBodegasTransportes.Click += new System.EventHandler(this.btnBodegasTransportes_Click);
             // 
             // btnGestionPersonal
             // 
             this.btnGestionPersonal.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnGestionPersonal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGestionPersonal.Location = new System.Drawing.Point(4, 60);
-            this.btnGestionPersonal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGestionPersonal.Location = new System.Drawing.Point(3, 49);
             this.btnGestionPersonal.Name = "btnGestionPersonal";
-            this.btnGestionPersonal.Size = new System.Drawing.Size(215, 28);
+            this.btnGestionPersonal.Size = new System.Drawing.Size(161, 23);
             this.btnGestionPersonal.TabIndex = 7;
             this.btnGestionPersonal.Text = "Gestión de Personal";
             this.btnGestionPersonal.UseVisualStyleBackColor = true;
@@ -312,21 +296,20 @@ namespace AdminRepartoApp
             // 
             this.btnReportesPersonal.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnReportesPersonal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReportesPersonal.Location = new System.Drawing.Point(3, 114);
-            this.btnReportesPersonal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnReportesPersonal.Location = new System.Drawing.Point(2, 93);
             this.btnReportesPersonal.Name = "btnReportesPersonal";
-            this.btnReportesPersonal.Size = new System.Drawing.Size(215, 28);
+            this.btnReportesPersonal.Size = new System.Drawing.Size(161, 23);
             this.btnReportesPersonal.TabIndex = 8;
             this.btnReportesPersonal.Text = "Reportes Personal";
             this.btnReportesPersonal.UseVisualStyleBackColor = true;
+            this.btnReportesPersonal.Click += new System.EventHandler(this.btnReportesPersonal_Click);
             // 
             // lblFechaHora
             // 
             this.lblFechaHora.AutoSize = true;
-            this.lblFechaHora.Location = new System.Drawing.Point(933, 80);
-            this.lblFechaHora.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFechaHora.Location = new System.Drawing.Point(700, 65);
             this.lblFechaHora.Name = "lblFechaHora";
-            this.lblFechaHora.Size = new System.Drawing.Size(0, 17);
+            this.lblFechaHora.Size = new System.Drawing.Size(0, 13);
             this.lblFechaHora.TabIndex = 0;
             // 
             // timerFechaHora
@@ -336,12 +319,12 @@ namespace AdminRepartoApp
             // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1067, 556);
+            this.ClientSize = new System.Drawing.Size(800, 452);
             this.Controls.Add(this.lblFechaHora);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblUsuarioIniciado);
@@ -350,7 +333,6 @@ namespace AdminRepartoApp
             this.Controls.Add(this.pnlMain);
             this.ForeColor = System.Drawing.Color.Black;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "frmMain";
             this.Text = "Menú";

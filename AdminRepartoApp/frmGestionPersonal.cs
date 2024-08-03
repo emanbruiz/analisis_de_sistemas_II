@@ -28,7 +28,7 @@ namespace AdminRepartoApp
                     connection.Open();
 
                     // Cargar correos de usuarios
-                    string queryCorreos = "SELECT Correo_Personal FROM Datos_Personales";
+                    string queryCorreos = "SELECT Correo_Personal FROM Datos_Personales WHERE ID_Empleado IS NOT NULL";
                     MySqlCommand cmdCorreos = new MySqlCommand(queryCorreos, connection);
                     MySqlDataReader readerCorreos = cmdCorreos.ExecuteReader();
 
@@ -372,6 +372,53 @@ namespace AdminRepartoApp
             chkPermitirEditar.Checked = false;
             chkPermitirEliminar.Checked = false;
             chkPermitirAnadir.Checked = false;
+        }
+
+        private void cmbTipoPersonal_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbTipoPersonal.SelectedItem == null)
+                return;
+
+            string tipoEmpleado = cmbTipoPersonal.SelectedItem.ToString();
+
+            string connectionString = "Server=127.0.0.1;Database=comercioelectronico;Uid=root;Pwd=161101;";
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    string query = @"
+                        SELECT dp.Correo_Personal, dp.Nombres, dp.Apellidos, dp.Genero, dp.Direccion_Personal, dp.DPI, dp.Telefono, e.Tipo_Empleado, e.Estado
+                        FROM Datos_Personales dp
+                        INNER JOIN Empleado e ON dp.ID_Empleado = e.ID_Empleado
+                        WHERE dp.ID_Empleado IS NOT NULL AND e.Tipo_Empleado = @tipoEmpleado";
+                    MySqlCommand cmd = new MySqlCommand(query, connection);
+                    cmd.Parameters.AddWithValue("@tipoEmpleado", tipoEmpleado);
+
+                    MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    adapter.Fill(dt);
+
+                    dgvPersonal.DataSource = dt;
+
+                    if (dt.Rows.Count > 0)
+                    {
+                        cmbBuscarPersonal.Items.Clear();
+                        foreach (DataRow row in dt.Rows)
+                        {
+                            cmbBuscarPersonal.Items.Add(row["Correo_Personal"].ToString());
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se encontraron empleados de este tipo en la base de datos.");
+                    }
+                }
+                catch (MySqlException ex)
+                {
+                    MessageBox.Show("Error al conectar con la base de datos: " + ex.Message);
+                }
+            }
         }
     }
 }

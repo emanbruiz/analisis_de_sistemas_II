@@ -40,6 +40,7 @@ namespace AdminRepartoApp
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.lblPassword = new System.Windows.Forms.Label();
             this.cmbGenero = new System.Windows.Forms.ComboBox();
+            this.btnEliminar = new System.Windows.Forms.Button();
             this.lblGenero = new System.Windows.Forms.Label();
             this.chkPermitirAnadir = new System.Windows.Forms.CheckBox();
             this.chkPermitirEliminar = new System.Windows.Forms.CheckBox();
@@ -61,7 +62,6 @@ namespace AdminRepartoApp
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
             this.cmbBuscarPersonal = new System.Windows.Forms.ComboBox();
-            this.btnEliminar = new System.Windows.Forms.Button();
             this.pnlMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPersonal)).BeginInit();
             this.grpDetallesPersonal.SuspendLayout();
@@ -110,6 +110,7 @@ namespace AdminRepartoApp
             this.cmbTipoPersonal.Name = "cmbTipoPersonal";
             this.cmbTipoPersonal.Size = new System.Drawing.Size(244, 24);
             this.cmbTipoPersonal.TabIndex = 6;
+            this.cmbTipoPersonal.SelectedIndexChanged += new System.EventHandler(this.cmbTipoPersonal_SelectedIndexChanged);
             // 
             // lblTipoPersonal
             // 
@@ -203,6 +204,16 @@ namespace AdminRepartoApp
             this.cmbGenero.Name = "cmbGenero";
             this.cmbGenero.Size = new System.Drawing.Size(275, 24);
             this.cmbGenero.TabIndex = 38;
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Location = new System.Drawing.Point(290, 429);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(127, 41);
+            this.btnEliminar.TabIndex = 11;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click_1);
             // 
             // lblGenero
             // 
@@ -404,16 +415,6 @@ namespace AdminRepartoApp
             this.cmbBuscarPersonal.Size = new System.Drawing.Size(287, 24);
             this.cmbBuscarPersonal.TabIndex = 15;
             this.cmbBuscarPersonal.SelectedIndexChanged += new System.EventHandler(this.cmbBuscarPersonal_SelectedIndexChanged_1);
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Location = new System.Drawing.Point(290, 429);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(127, 41);
-            this.btnEliminar.TabIndex = 11;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = true;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click_1);
             // 
             // frmGestionPersonal
             // 

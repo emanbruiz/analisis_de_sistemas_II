@@ -1,4 +1,5 @@
-﻿using System;
+﻿// Form hecho por Maty Lourdes Mancilla García || 0901-21-2128
+using System;
 using System.Data;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;

@@ -1,4 +1,5 @@
-﻿using System;
+﻿// Form hecho por Kevin Daniel Santos Castro || 0901-17-2994
+using System;
 using System.Linq;
 using System.Net;
 using System.Windows.Forms;
@@ -11,6 +12,9 @@ namespace ClientesRepartoApp
         public frmLogin()
         {
             InitializeComponent();
+            // Agregar eventos KeyDown a los campos de texto
+            txtCorreo.KeyDown += new KeyEventHandler(txt_KeyDown);
+            txtPassword.KeyDown += new KeyEventHandler(txt_KeyDown);
         }
 
         private void btnIniciarSesion_Click(object sender, EventArgs e)
@@ -56,6 +60,15 @@ namespace ClientesRepartoApp
                     MessageBox.Show("Ocurrió un error inesperado: " + ex.Message);
                     RegistrarLogActividad($"Error inesperado: {ex.Message}");
                 }
+            }
+        }
+
+        private void txt_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true;
+                btnIniciarSesion_Click(sender, e);
             }
         }
 

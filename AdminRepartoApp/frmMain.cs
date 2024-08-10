@@ -1,4 +1,5 @@
-﻿using System;
+﻿// Form Hecho por Kevin Daniel Santos Castro || 0901-17-2994
+using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
@@ -54,19 +55,6 @@ namespace AdminRepartoApp
         {
             frmRegister registerForm = new frmRegister();
             registerForm.Show();
-        }
-
-        private void btnActualizarDatosUsuarios_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                frmUpdate updateForm = new frmUpdate(idEmpleado); // Pasar el ID del empleado al formulario de actualización
-                updateForm.Show();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al abrir el formulario de actualización: " + ex.Message);
-            }
         }
 
         private void btnProductos_Click(object sender, EventArgs e)
@@ -212,5 +200,9 @@ namespace AdminRepartoApp
             }
         }
 
+        private void btnPilotos_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

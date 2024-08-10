@@ -1,4 +1,5 @@
-﻿using System;
+﻿// Form Hecho por Kevin Daniel Santos Castro || 0901-17-2994
+using System;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using System.Net;
@@ -13,6 +14,10 @@ namespace AdminRepartoApp
         public frmLogin()
         {
             InitializeComponent();
+
+            // Agregar manejadores de eventos KeyPress para los TextBox
+            txtCorreo.KeyPress += new KeyPressEventHandler(txt_KeyPress);
+            txtContrasena.KeyPress += new KeyPressEventHandler(txt_KeyPress);
         }
 
         private void frmLogin_Load(object sender, EventArgs e)
@@ -20,6 +25,15 @@ namespace AdminRepartoApp
             // Mostrar mensaje de bienvenida basado en la hora del día
             string mensajeBienvenida = ObtenerMensajeBienvenida();
             MessageBox.Show(mensajeBienvenida, "Bienvenido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void txt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                e.Handled = true; // Evitar el sonido de beep
+                btnLogin_Click_1(sender, e); // Ejecutar el evento de clic del botón
+            }
         }
 
         private void btnLogin_Click_1(object sender, EventArgs e)
@@ -191,15 +205,15 @@ namespace AdminRepartoApp
 
             if (hora < 12)
             {
-                mensaje = "Buenos días! " + mensaje;
+                mensaje = "¡Buenos días! " + mensaje;
             }
             else if (hora < 18)
             {
-                mensaje = "Buenas tardes! " + mensaje;
+                mensaje = "¡Buenas tardes! " + mensaje;
             }
             else
             {
-                mensaje = "Buenas noches! " + mensaje;
+                mensaje = "¡Buenas noches! " + mensaje;
             }
 
             return mensaje;

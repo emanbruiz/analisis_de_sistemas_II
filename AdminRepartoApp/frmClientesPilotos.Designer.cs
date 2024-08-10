@@ -29,17 +29,22 @@ namespace AdminRepartoApp
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmClientesPilotos));
             this.pnlMain = new System.Windows.Forms.Panel();
             this.lblClientesPilotos = new System.Windows.Forms.Label();
             this.lblBuscarCliente = new System.Windows.Forms.Label();
             this.gpbCliente = new System.Windows.Forms.GroupBox();
+            this.txtConfirmarCliente = new System.Windows.Forms.TextBox();
+            this.lblConfirmar = new System.Windows.Forms.Label();
+            this.txtContrasenaCliente = new System.Windows.Forms.TextBox();
+            this.lblContrasena = new System.Windows.Forms.Label();
             this.btnAgregarCliente = new System.Windows.Forms.Button();
             this.cmbGeneroCliente = new System.Windows.Forms.ComboBox();
             this.dgvClientes = new System.Windows.Forms.DataGridView();
             this.txtCalificacionCliente = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblCalificacionCliente = new System.Windows.Forms.Label();
             this.txtDPICliente = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblDPICliente = new System.Windows.Forms.Label();
             this.lblGeneroCliente = new System.Windows.Forms.Label();
             this.btnCancelarCliente = new System.Windows.Forms.Button();
             this.btnEliminarCliente = new System.Windows.Forms.Button();
@@ -58,30 +63,34 @@ namespace AdminRepartoApp
             this.lblNombreCliente = new System.Windows.Forms.Label();
             this.cmbBuscarCliente = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtConfirmarPiloto = new System.Windows.Forms.TextBox();
+            this.lblConfirmarP = new System.Windows.Forms.Label();
             this.btnAgregarPiloto = new System.Windows.Forms.Button();
+            this.txtContrasenaPiloto = new System.Windows.Forms.TextBox();
             this.cmbBuscarPiloto = new System.Windows.Forms.ComboBox();
+            this.lblContrasenaP = new System.Windows.Forms.Label();
             this.cmbGeneroPiloto = new System.Windows.Forms.ComboBox();
             this.dgvPilotos = new System.Windows.Forms.DataGridView();
             this.txtCalificacionPiloto = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblCalificacionP = new System.Windows.Forms.Label();
             this.txtDPIPiloto = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblDPIP = new System.Windows.Forms.Label();
+            this.lblGeneroP = new System.Windows.Forms.Label();
             this.btnCancelarPiloto = new System.Windows.Forms.Button();
             this.btnEliminarPiloto = new System.Windows.Forms.Button();
             this.btnActualizarPiloto = new System.Windows.Forms.Button();
             this.btnGuardarPiloto = new System.Windows.Forms.Button();
             this.btnVerPilotos = new System.Windows.Forms.Button();
             this.txtDireccionPiloto = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblDireccionP = new System.Windows.Forms.Label();
             this.txtTelefonoPiloto = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblTelefonoP = new System.Windows.Forms.Label();
             this.txtCorreoPiloto = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lblCorreoP = new System.Windows.Forms.Label();
             this.txtApellidoPiloto = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lblApellidoP = new System.Windows.Forms.Label();
             this.txtNombrePiloto = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.lblNombreP = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.pnlMain.SuspendLayout();
             this.gpbCliente.SuspendLayout();
@@ -125,13 +134,17 @@ namespace AdminRepartoApp
             // 
             // gpbCliente
             // 
+            this.gpbCliente.Controls.Add(this.txtConfirmarCliente);
+            this.gpbCliente.Controls.Add(this.lblConfirmar);
+            this.gpbCliente.Controls.Add(this.txtContrasenaCliente);
+            this.gpbCliente.Controls.Add(this.lblContrasena);
             this.gpbCliente.Controls.Add(this.btnAgregarCliente);
             this.gpbCliente.Controls.Add(this.cmbGeneroCliente);
             this.gpbCliente.Controls.Add(this.dgvClientes);
             this.gpbCliente.Controls.Add(this.txtCalificacionCliente);
-            this.gpbCliente.Controls.Add(this.label3);
+            this.gpbCliente.Controls.Add(this.lblCalificacionCliente);
             this.gpbCliente.Controls.Add(this.txtDPICliente);
-            this.gpbCliente.Controls.Add(this.label2);
+            this.gpbCliente.Controls.Add(this.lblDPICliente);
             this.gpbCliente.Controls.Add(this.lblGeneroCliente);
             this.gpbCliente.Controls.Add(this.btnCancelarCliente);
             this.gpbCliente.Controls.Add(this.btnEliminarCliente);
@@ -154,10 +167,46 @@ namespace AdminRepartoApp
             this.gpbCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gpbCliente.Name = "gpbCliente";
             this.gpbCliente.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gpbCliente.Size = new System.Drawing.Size(560, 711);
+            this.gpbCliente.Size = new System.Drawing.Size(560, 753);
             this.gpbCliente.TabIndex = 5;
             this.gpbCliente.TabStop = false;
             this.gpbCliente.Text = "Clientes";
+            // 
+            // txtConfirmarCliente
+            // 
+            this.txtConfirmarCliente.Location = new System.Drawing.Point(277, 325);
+            this.txtConfirmarCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtConfirmarCliente.Name = "txtConfirmarCliente";
+            this.txtConfirmarCliente.Size = new System.Drawing.Size(275, 22);
+            this.txtConfirmarCliente.TabIndex = 11;
+            this.txtConfirmarCliente.UseSystemPasswordChar = true;
+            // 
+            // lblConfirmar
+            // 
+            this.lblConfirmar.AutoSize = true;
+            this.lblConfirmar.Location = new System.Drawing.Point(4, 329);
+            this.lblConfirmar.Name = "lblConfirmar";
+            this.lblConfirmar.Size = new System.Drawing.Size(146, 17);
+            this.lblConfirmar.TabIndex = 31;
+            this.lblConfirmar.Text = "Confirmar Contraseña";
+            // 
+            // txtContrasenaCliente
+            // 
+            this.txtContrasenaCliente.Location = new System.Drawing.Point(277, 295);
+            this.txtContrasenaCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtContrasenaCliente.Name = "txtContrasenaCliente";
+            this.txtContrasenaCliente.Size = new System.Drawing.Size(275, 22);
+            this.txtContrasenaCliente.TabIndex = 10;
+            this.txtContrasenaCliente.UseSystemPasswordChar = true;
+            // 
+            // lblContrasena
+            // 
+            this.lblContrasena.AutoSize = true;
+            this.lblContrasena.Location = new System.Drawing.Point(4, 299);
+            this.lblContrasena.Name = "lblContrasena";
+            this.lblContrasena.Size = new System.Drawing.Size(152, 17);
+            this.lblContrasena.TabIndex = 29;
+            this.lblContrasena.Text = "Establecer Contraseña";
             // 
             // btnAgregarCliente
             // 
@@ -165,7 +214,7 @@ namespace AdminRepartoApp
             this.btnAgregarCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAgregarCliente.Name = "btnAgregarCliente";
             this.btnAgregarCliente.Size = new System.Drawing.Size(101, 46);
-            this.btnAgregarCliente.TabIndex = 28;
+            this.btnAgregarCliente.TabIndex = 0;
             this.btnAgregarCliente.Text = "Agregar Cliente";
             this.btnAgregarCliente.UseVisualStyleBackColor = true;
             this.btnAgregarCliente.Click += new System.EventHandler(this.btnAgregarCliente_Click);
@@ -181,12 +230,12 @@ namespace AdminRepartoApp
             this.cmbGeneroCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbGeneroCliente.Name = "cmbGeneroCliente";
             this.cmbGeneroCliente.Size = new System.Drawing.Size(273, 24);
-            this.cmbGeneroCliente.TabIndex = 28;
+            this.cmbGeneroCliente.TabIndex = 7;
             // 
             // dgvClientes
             // 
             this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvClientes.Location = new System.Drawing.Point(12, 377);
+            this.dgvClientes.Location = new System.Drawing.Point(5, 416);
             this.dgvClientes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvClientes.Name = "dgvClientes";
             this.dgvClientes.RowHeadersWidth = 51;
@@ -200,16 +249,16 @@ namespace AdminRepartoApp
             this.txtCalificacionCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCalificacionCliente.Name = "txtCalificacionCliente";
             this.txtCalificacionCliente.Size = new System.Drawing.Size(275, 22);
-            this.txtCalificacionCliente.TabIndex = 26;
+            this.txtCalificacionCliente.TabIndex = 9;
             // 
-            // label3
+            // lblCalificacionCliente
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(5, 270);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(147, 17);
-            this.label3.TabIndex = 25;
-            this.label3.Text = "Calificación del cliente";
+            this.lblCalificacionCliente.AutoSize = true;
+            this.lblCalificacionCliente.Location = new System.Drawing.Point(5, 270);
+            this.lblCalificacionCliente.Name = "lblCalificacionCliente";
+            this.lblCalificacionCliente.Size = new System.Drawing.Size(147, 17);
+            this.lblCalificacionCliente.TabIndex = 25;
+            this.lblCalificacionCliente.Text = "Calificación del cliente";
             // 
             // txtDPICliente
             // 
@@ -217,16 +266,16 @@ namespace AdminRepartoApp
             this.txtDPICliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDPICliente.Name = "txtDPICliente";
             this.txtDPICliente.Size = new System.Drawing.Size(275, 22);
-            this.txtDPICliente.TabIndex = 24;
+            this.txtDPICliente.TabIndex = 8;
             // 
-            // label2
+            // lblDPICliente
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(5, 241);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 17);
-            this.label2.TabIndex = 23;
-            this.label2.Text = "DPI del cliente";
+            this.lblDPICliente.AutoSize = true;
+            this.lblDPICliente.Location = new System.Drawing.Point(5, 241);
+            this.lblDPICliente.Name = "lblDPICliente";
+            this.lblDPICliente.Size = new System.Drawing.Size(98, 17);
+            this.lblDPICliente.TabIndex = 23;
+            this.lblDPICliente.Text = "DPI del cliente";
             // 
             // lblGeneroCliente
             // 
@@ -239,55 +288,55 @@ namespace AdminRepartoApp
             // 
             // btnCancelarCliente
             // 
-            this.btnCancelarCliente.Location = new System.Drawing.Point(443, 324);
+            this.btnCancelarCliente.Location = new System.Drawing.Point(436, 363);
             this.btnCancelarCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancelarCliente.Name = "btnCancelarCliente";
             this.btnCancelarCliente.Size = new System.Drawing.Size(101, 46);
-            this.btnCancelarCliente.TabIndex = 20;
+            this.btnCancelarCliente.TabIndex = 16;
             this.btnCancelarCliente.Text = "Cancelar Cliente";
             this.btnCancelarCliente.UseVisualStyleBackColor = true;
             this.btnCancelarCliente.Click += new System.EventHandler(this.btnCancelarCliente_Click);
             // 
             // btnEliminarCliente
             // 
-            this.btnEliminarCliente.Location = new System.Drawing.Point(336, 324);
+            this.btnEliminarCliente.Location = new System.Drawing.Point(329, 363);
             this.btnEliminarCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEliminarCliente.Name = "btnEliminarCliente";
             this.btnEliminarCliente.Size = new System.Drawing.Size(101, 46);
-            this.btnEliminarCliente.TabIndex = 19;
+            this.btnEliminarCliente.TabIndex = 15;
             this.btnEliminarCliente.Text = "Eliminar Cliente";
             this.btnEliminarCliente.UseVisualStyleBackColor = true;
             this.btnEliminarCliente.Click += new System.EventHandler(this.btnEliminarCliente_Click);
             // 
             // btnActualizarCliente
             // 
-            this.btnActualizarCliente.Location = new System.Drawing.Point(229, 324);
+            this.btnActualizarCliente.Location = new System.Drawing.Point(223, 363);
             this.btnActualizarCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnActualizarCliente.Name = "btnActualizarCliente";
             this.btnActualizarCliente.Size = new System.Drawing.Size(101, 46);
-            this.btnActualizarCliente.TabIndex = 18;
+            this.btnActualizarCliente.TabIndex = 14;
             this.btnActualizarCliente.Text = "Actualizar Cliente";
             this.btnActualizarCliente.UseVisualStyleBackColor = true;
             this.btnActualizarCliente.Click += new System.EventHandler(this.btnActualizarCliente_Click);
             // 
             // btnGuardarCliente
             // 
-            this.btnGuardarCliente.Location = new System.Drawing.Point(123, 324);
+            this.btnGuardarCliente.Location = new System.Drawing.Point(116, 363);
             this.btnGuardarCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGuardarCliente.Name = "btnGuardarCliente";
             this.btnGuardarCliente.Size = new System.Drawing.Size(101, 46);
-            this.btnGuardarCliente.TabIndex = 17;
+            this.btnGuardarCliente.TabIndex = 13;
             this.btnGuardarCliente.Text = "Guardar Cliente";
             this.btnGuardarCliente.UseVisualStyleBackColor = true;
             this.btnGuardarCliente.Click += new System.EventHandler(this.btnGuardarCliente_Click);
             // 
             // btnVerClientes
             // 
-            this.btnVerClientes.Location = new System.Drawing.Point(15, 324);
+            this.btnVerClientes.Location = new System.Drawing.Point(8, 363);
             this.btnVerClientes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnVerClientes.Name = "btnVerClientes";
             this.btnVerClientes.Size = new System.Drawing.Size(101, 46);
-            this.btnVerClientes.TabIndex = 16;
+            this.btnVerClientes.TabIndex = 12;
             this.btnVerClientes.Text = "Ver Clientes";
             this.btnVerClientes.UseVisualStyleBackColor = true;
             this.btnVerClientes.Click += new System.EventHandler(this.btnVerClientes_Click);
@@ -298,7 +347,7 @@ namespace AdminRepartoApp
             this.txtDireccionCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDireccionCliente.Name = "txtDireccionCliente";
             this.txtDireccionCliente.Size = new System.Drawing.Size(275, 22);
-            this.txtDireccionCliente.TabIndex = 15;
+            this.txtDireccionCliente.TabIndex = 6;
             // 
             // lblDireccionCliente
             // 
@@ -315,7 +364,7 @@ namespace AdminRepartoApp
             this.txtTelefonoCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTelefonoCliente.Name = "txtTelefonoCliente";
             this.txtTelefonoCliente.Size = new System.Drawing.Size(275, 22);
-            this.txtTelefonoCliente.TabIndex = 13;
+            this.txtTelefonoCliente.TabIndex = 5;
             // 
             // lblTelefonoCliente
             // 
@@ -332,7 +381,7 @@ namespace AdminRepartoApp
             this.txtCorreoCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCorreoCliente.Name = "txtCorreoCliente";
             this.txtCorreoCliente.Size = new System.Drawing.Size(275, 22);
-            this.txtCorreoCliente.TabIndex = 11;
+            this.txtCorreoCliente.TabIndex = 114;
             // 
             // lblCorreoCliente
             // 
@@ -349,7 +398,7 @@ namespace AdminRepartoApp
             this.txtApellidoCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtApellidoCliente.Name = "txtApellidoCliente";
             this.txtApellidoCliente.Size = new System.Drawing.Size(275, 22);
-            this.txtApellidoCliente.TabIndex = 9;
+            this.txtApellidoCliente.TabIndex = 3;
             // 
             // lblApellidoCliente
             // 
@@ -366,7 +415,7 @@ namespace AdminRepartoApp
             this.txtNombreCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNombreCliente.Name = "txtNombreCliente";
             this.txtNombreCliente.Size = new System.Drawing.Size(275, 22);
-            this.txtNombreCliente.TabIndex = 7;
+            this.txtNombreCliente.TabIndex = 2;
             // 
             // lblNombreCliente
             // 
@@ -385,44 +434,66 @@ namespace AdminRepartoApp
             this.cmbBuscarCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbBuscarCliente.Name = "cmbBuscarCliente";
             this.cmbBuscarCliente.Size = new System.Drawing.Size(273, 24);
-            this.cmbBuscarCliente.TabIndex = 5;
+            this.cmbBuscarCliente.TabIndex = 1;
             this.cmbBuscarCliente.SelectedIndexChanged += new System.EventHandler(this.cmbBuscarCliente_SelectedIndexChanged);
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtConfirmarPiloto);
+            this.groupBox1.Controls.Add(this.lblConfirmarP);
             this.groupBox1.Controls.Add(this.btnAgregarPiloto);
+            this.groupBox1.Controls.Add(this.txtContrasenaPiloto);
             this.groupBox1.Controls.Add(this.cmbBuscarPiloto);
+            this.groupBox1.Controls.Add(this.lblContrasenaP);
             this.groupBox1.Controls.Add(this.cmbGeneroPiloto);
             this.groupBox1.Controls.Add(this.dgvPilotos);
             this.groupBox1.Controls.Add(this.txtCalificacionPiloto);
-            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.lblCalificacionP);
             this.groupBox1.Controls.Add(this.txtDPIPiloto);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.lblDPIP);
+            this.groupBox1.Controls.Add(this.lblGeneroP);
             this.groupBox1.Controls.Add(this.btnCancelarPiloto);
             this.groupBox1.Controls.Add(this.btnEliminarPiloto);
             this.groupBox1.Controls.Add(this.btnActualizarPiloto);
             this.groupBox1.Controls.Add(this.btnGuardarPiloto);
             this.groupBox1.Controls.Add(this.btnVerPilotos);
             this.groupBox1.Controls.Add(this.txtDireccionPiloto);
-            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.lblDireccionP);
             this.groupBox1.Controls.Add(this.txtTelefonoPiloto);
-            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.lblTelefonoP);
             this.groupBox1.Controls.Add(this.txtCorreoPiloto);
-            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.lblCorreoP);
             this.groupBox1.Controls.Add(this.txtApellidoPiloto);
-            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.lblApellidoP);
             this.groupBox1.Controls.Add(this.txtNombrePiloto);
-            this.groupBox1.Controls.Add(this.label10);
+            this.groupBox1.Controls.Add(this.lblNombreP);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Location = new System.Drawing.Point(577, 84);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(563, 711);
+            this.groupBox1.Size = new System.Drawing.Size(563, 753);
             this.groupBox1.TabIndex = 27;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Pilotos";
+            // 
+            // txtConfirmarPiloto
+            // 
+            this.txtConfirmarPiloto.Location = new System.Drawing.Point(279, 325);
+            this.txtConfirmarPiloto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtConfirmarPiloto.Name = "txtConfirmarPiloto";
+            this.txtConfirmarPiloto.Size = new System.Drawing.Size(275, 22);
+            this.txtConfirmarPiloto.TabIndex = 28;
+            this.txtConfirmarPiloto.UseSystemPasswordChar = true;
+            // 
+            // lblConfirmarP
+            // 
+            this.lblConfirmarP.AutoSize = true;
+            this.lblConfirmarP.Location = new System.Drawing.Point(5, 329);
+            this.lblConfirmarP.Name = "lblConfirmarP";
+            this.lblConfirmarP.Size = new System.Drawing.Size(146, 17);
+            this.lblConfirmarP.TabIndex = 35;
+            this.lblConfirmarP.Text = "Confirmar Contraseña";
             // 
             // btnAgregarPiloto
             // 
@@ -430,10 +501,19 @@ namespace AdminRepartoApp
             this.btnAgregarPiloto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAgregarPiloto.Name = "btnAgregarPiloto";
             this.btnAgregarPiloto.Size = new System.Drawing.Size(101, 46);
-            this.btnAgregarPiloto.TabIndex = 29;
+            this.btnAgregarPiloto.TabIndex = 17;
             this.btnAgregarPiloto.Text = "Agregar Piloto";
             this.btnAgregarPiloto.UseVisualStyleBackColor = true;
             this.btnAgregarPiloto.Click += new System.EventHandler(this.btnAgregarPiloto_Click);
+            // 
+            // txtContrasenaPiloto
+            // 
+            this.txtContrasenaPiloto.Location = new System.Drawing.Point(279, 295);
+            this.txtContrasenaPiloto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtContrasenaPiloto.Name = "txtContrasenaPiloto";
+            this.txtContrasenaPiloto.Size = new System.Drawing.Size(275, 22);
+            this.txtContrasenaPiloto.TabIndex = 27;
+            this.txtContrasenaPiloto.UseSystemPasswordChar = true;
             // 
             // cmbBuscarPiloto
             // 
@@ -443,8 +523,17 @@ namespace AdminRepartoApp
             this.cmbBuscarPiloto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbBuscarPiloto.Name = "cmbBuscarPiloto";
             this.cmbBuscarPiloto.Size = new System.Drawing.Size(273, 24);
-            this.cmbBuscarPiloto.TabIndex = 29;
+            this.cmbBuscarPiloto.TabIndex = 18;
             this.cmbBuscarPiloto.SelectedIndexChanged += new System.EventHandler(this.cmbBuscarPiloto_SelectedIndexChanged_1);
+            // 
+            // lblContrasenaP
+            // 
+            this.lblContrasenaP.AutoSize = true;
+            this.lblContrasenaP.Location = new System.Drawing.Point(5, 299);
+            this.lblContrasenaP.Name = "lblContrasenaP";
+            this.lblContrasenaP.Size = new System.Drawing.Size(152, 17);
+            this.lblContrasenaP.TabIndex = 33;
+            this.lblContrasenaP.Text = "Establecer Contraseña";
             // 
             // cmbGeneroPiloto
             // 
@@ -457,12 +546,12 @@ namespace AdminRepartoApp
             this.cmbGeneroPiloto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbGeneroPiloto.Name = "cmbGeneroPiloto";
             this.cmbGeneroPiloto.Size = new System.Drawing.Size(273, 24);
-            this.cmbGeneroPiloto.TabIndex = 29;
+            this.cmbGeneroPiloto.TabIndex = 24;
             // 
             // dgvPilotos
             // 
             this.dgvPilotos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPilotos.Location = new System.Drawing.Point(13, 377);
+            this.dgvPilotos.Location = new System.Drawing.Point(21, 416);
             this.dgvPilotos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvPilotos.Name = "dgvPilotos";
             this.dgvPilotos.RowHeadersWidth = 51;
@@ -478,14 +567,14 @@ namespace AdminRepartoApp
             this.txtCalificacionPiloto.Size = new System.Drawing.Size(275, 22);
             this.txtCalificacionPiloto.TabIndex = 26;
             // 
-            // label1
+            // lblCalificacionP
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(5, 270);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(141, 17);
-            this.label1.TabIndex = 25;
-            this.label1.Text = "Calificación del Piloto";
+            this.lblCalificacionP.AutoSize = true;
+            this.lblCalificacionP.Location = new System.Drawing.Point(5, 270);
+            this.lblCalificacionP.Name = "lblCalificacionP";
+            this.lblCalificacionP.Size = new System.Drawing.Size(141, 17);
+            this.lblCalificacionP.TabIndex = 25;
+            this.lblCalificacionP.Text = "Calificación del Piloto";
             // 
             // txtDPIPiloto
             // 
@@ -493,77 +582,77 @@ namespace AdminRepartoApp
             this.txtDPIPiloto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDPIPiloto.Name = "txtDPIPiloto";
             this.txtDPIPiloto.Size = new System.Drawing.Size(275, 22);
-            this.txtDPIPiloto.TabIndex = 24;
+            this.txtDPIPiloto.TabIndex = 25;
             // 
-            // label4
+            // lblDPIP
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(5, 241);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(92, 17);
-            this.label4.TabIndex = 23;
-            this.label4.Text = "DPI del Piloto";
+            this.lblDPIP.AutoSize = true;
+            this.lblDPIP.Location = new System.Drawing.Point(5, 241);
+            this.lblDPIP.Name = "lblDPIP";
+            this.lblDPIP.Size = new System.Drawing.Size(92, 17);
+            this.lblDPIP.TabIndex = 23;
+            this.lblDPIP.Text = "DPI del Piloto";
             // 
-            // label5
+            // lblGeneroP
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(5, 213);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(118, 17);
-            this.label5.TabIndex = 21;
-            this.label5.Text = "Género del Piloto";
+            this.lblGeneroP.AutoSize = true;
+            this.lblGeneroP.Location = new System.Drawing.Point(5, 213);
+            this.lblGeneroP.Name = "lblGeneroP";
+            this.lblGeneroP.Size = new System.Drawing.Size(118, 17);
+            this.lblGeneroP.TabIndex = 21;
+            this.lblGeneroP.Text = "Género del Piloto";
             // 
             // btnCancelarPiloto
             // 
-            this.btnCancelarPiloto.Location = new System.Drawing.Point(443, 324);
+            this.btnCancelarPiloto.Location = new System.Drawing.Point(451, 363);
             this.btnCancelarPiloto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancelarPiloto.Name = "btnCancelarPiloto";
             this.btnCancelarPiloto.Size = new System.Drawing.Size(101, 46);
-            this.btnCancelarPiloto.TabIndex = 20;
+            this.btnCancelarPiloto.TabIndex = 33;
             this.btnCancelarPiloto.Text = "Cancelar Piloto";
             this.btnCancelarPiloto.UseVisualStyleBackColor = true;
             this.btnCancelarPiloto.Click += new System.EventHandler(this.btnCancelarPiloto_Click_1);
             // 
             // btnEliminarPiloto
             // 
-            this.btnEliminarPiloto.Location = new System.Drawing.Point(336, 324);
+            this.btnEliminarPiloto.Location = new System.Drawing.Point(344, 363);
             this.btnEliminarPiloto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEliminarPiloto.Name = "btnEliminarPiloto";
             this.btnEliminarPiloto.Size = new System.Drawing.Size(101, 46);
-            this.btnEliminarPiloto.TabIndex = 19;
+            this.btnEliminarPiloto.TabIndex = 32;
             this.btnEliminarPiloto.Text = "Eliminar Piloto";
             this.btnEliminarPiloto.UseVisualStyleBackColor = true;
             this.btnEliminarPiloto.Click += new System.EventHandler(this.btnEliminarPiloto_Click_1);
             // 
             // btnActualizarPiloto
             // 
-            this.btnActualizarPiloto.Location = new System.Drawing.Point(229, 324);
+            this.btnActualizarPiloto.Location = new System.Drawing.Point(237, 363);
             this.btnActualizarPiloto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnActualizarPiloto.Name = "btnActualizarPiloto";
             this.btnActualizarPiloto.Size = new System.Drawing.Size(101, 46);
-            this.btnActualizarPiloto.TabIndex = 18;
+            this.btnActualizarPiloto.TabIndex = 31;
             this.btnActualizarPiloto.Text = "Actualizar Piloto";
             this.btnActualizarPiloto.UseVisualStyleBackColor = true;
             this.btnActualizarPiloto.Click += new System.EventHandler(this.btnActualizarPiloto_Click_1);
             // 
             // btnGuardarPiloto
             // 
-            this.btnGuardarPiloto.Location = new System.Drawing.Point(123, 324);
+            this.btnGuardarPiloto.Location = new System.Drawing.Point(131, 363);
             this.btnGuardarPiloto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGuardarPiloto.Name = "btnGuardarPiloto";
             this.btnGuardarPiloto.Size = new System.Drawing.Size(101, 46);
-            this.btnGuardarPiloto.TabIndex = 17;
+            this.btnGuardarPiloto.TabIndex = 30;
             this.btnGuardarPiloto.Text = "Guardar Piloto";
             this.btnGuardarPiloto.UseVisualStyleBackColor = true;
             this.btnGuardarPiloto.Click += new System.EventHandler(this.btnGuardarPiloto_Click_1);
             // 
             // btnVerPilotos
             // 
-            this.btnVerPilotos.Location = new System.Drawing.Point(15, 324);
+            this.btnVerPilotos.Location = new System.Drawing.Point(23, 363);
             this.btnVerPilotos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnVerPilotos.Name = "btnVerPilotos";
             this.btnVerPilotos.Size = new System.Drawing.Size(101, 46);
-            this.btnVerPilotos.TabIndex = 16;
+            this.btnVerPilotos.TabIndex = 29;
             this.btnVerPilotos.Text = "Ver Piloto";
             this.btnVerPilotos.UseVisualStyleBackColor = true;
             this.btnVerPilotos.Click += new System.EventHandler(this.btnVerPilotos_Click_1);
@@ -574,16 +663,16 @@ namespace AdminRepartoApp
             this.txtDireccionPiloto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDireccionPiloto.Name = "txtDireccionPiloto";
             this.txtDireccionPiloto.Size = new System.Drawing.Size(275, 22);
-            this.txtDireccionPiloto.TabIndex = 15;
+            this.txtDireccionPiloto.TabIndex = 23;
             // 
-            // label6
+            // lblDireccionP
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(5, 185);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(129, 17);
-            this.label6.TabIndex = 14;
-            this.label6.Text = "Dirección del Piloto";
+            this.lblDireccionP.AutoSize = true;
+            this.lblDireccionP.Location = new System.Drawing.Point(5, 185);
+            this.lblDireccionP.Name = "lblDireccionP";
+            this.lblDireccionP.Size = new System.Drawing.Size(129, 17);
+            this.lblDireccionP.TabIndex = 14;
+            this.lblDireccionP.Text = "Dirección del Piloto";
             // 
             // txtTelefonoPiloto
             // 
@@ -591,16 +680,16 @@ namespace AdminRepartoApp
             this.txtTelefonoPiloto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTelefonoPiloto.Name = "txtTelefonoPiloto";
             this.txtTelefonoPiloto.Size = new System.Drawing.Size(275, 22);
-            this.txtTelefonoPiloto.TabIndex = 13;
+            this.txtTelefonoPiloto.TabIndex = 22;
             // 
-            // label7
+            // lblTelefonoP
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(5, 154);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(126, 17);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "Teléfono del Piloto";
+            this.lblTelefonoP.AutoSize = true;
+            this.lblTelefonoP.Location = new System.Drawing.Point(5, 154);
+            this.lblTelefonoP.Name = "lblTelefonoP";
+            this.lblTelefonoP.Size = new System.Drawing.Size(126, 17);
+            this.lblTelefonoP.TabIndex = 12;
+            this.lblTelefonoP.Text = "Teléfono del Piloto";
             // 
             // txtCorreoPiloto
             // 
@@ -608,16 +697,16 @@ namespace AdminRepartoApp
             this.txtCorreoPiloto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCorreoPiloto.Name = "txtCorreoPiloto";
             this.txtCorreoPiloto.Size = new System.Drawing.Size(275, 22);
-            this.txtCorreoPiloto.TabIndex = 11;
+            this.txtCorreoPiloto.TabIndex = 21;
             // 
-            // label8
+            // lblCorreoP
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(5, 126);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(113, 17);
-            this.label8.TabIndex = 10;
-            this.label8.Text = "Correo del Piloto";
+            this.lblCorreoP.AutoSize = true;
+            this.lblCorreoP.Location = new System.Drawing.Point(5, 126);
+            this.lblCorreoP.Name = "lblCorreoP";
+            this.lblCorreoP.Size = new System.Drawing.Size(113, 17);
+            this.lblCorreoP.TabIndex = 10;
+            this.lblCorreoP.Text = "Correo del Piloto";
             // 
             // txtApellidoPiloto
             // 
@@ -625,16 +714,16 @@ namespace AdminRepartoApp
             this.txtApellidoPiloto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtApellidoPiloto.Name = "txtApellidoPiloto";
             this.txtApellidoPiloto.Size = new System.Drawing.Size(275, 22);
-            this.txtApellidoPiloto.TabIndex = 9;
+            this.txtApellidoPiloto.TabIndex = 20;
             // 
-            // label9
+            // lblApellidoP
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(5, 98);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(120, 17);
-            this.label9.TabIndex = 8;
-            this.label9.Text = "Apellido del Piloto";
+            this.lblApellidoP.AutoSize = true;
+            this.lblApellidoP.Location = new System.Drawing.Point(5, 98);
+            this.lblApellidoP.Name = "lblApellidoP";
+            this.lblApellidoP.Size = new System.Drawing.Size(120, 17);
+            this.lblApellidoP.TabIndex = 8;
+            this.lblApellidoP.Text = "Apellido del Piloto";
             // 
             // txtNombrePiloto
             // 
@@ -642,16 +731,16 @@ namespace AdminRepartoApp
             this.txtNombrePiloto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNombrePiloto.Name = "txtNombrePiloto";
             this.txtNombrePiloto.Size = new System.Drawing.Size(275, 22);
-            this.txtNombrePiloto.TabIndex = 7;
+            this.txtNombrePiloto.TabIndex = 19;
             // 
-            // label10
+            // lblNombreP
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(5, 70);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(120, 17);
-            this.label10.TabIndex = 6;
-            this.label10.Text = "Nombre del Piloto";
+            this.lblNombreP.AutoSize = true;
+            this.lblNombreP.Location = new System.Drawing.Point(5, 70);
+            this.lblNombreP.Name = "lblNombreP";
+            this.lblNombreP.Size = new System.Drawing.Size(120, 17);
+            this.lblNombreP.TabIndex = 6;
+            this.lblNombreP.Text = "Nombre del Piloto";
             // 
             // label11
             // 
@@ -666,11 +755,12 @@ namespace AdminRepartoApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1151, 798);
+            this.ClientSize = new System.Drawing.Size(1151, 843);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gpbCliente);
             this.Controls.Add(this.pnlMain);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.Name = "frmClientesPilotos";
@@ -711,32 +801,31 @@ namespace AdminRepartoApp
         private System.Windows.Forms.Button btnActualizarCliente;
         private System.Windows.Forms.Button btnGuardarCliente;
         private System.Windows.Forms.TextBox txtCalificacionCliente;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblCalificacionCliente;
         private System.Windows.Forms.TextBox txtDPICliente;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblDPICliente;
         private System.Windows.Forms.Label lblGeneroCliente;
         private System.Windows.Forms.DataGridView dgvClientes;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtCalificacionPiloto;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblCalificacionP;
         private System.Windows.Forms.TextBox txtDPIPiloto;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblDPIP;
+        private System.Windows.Forms.Label lblGeneroP;
         private System.Windows.Forms.Button btnCancelarPiloto;
         private System.Windows.Forms.Button btnEliminarPiloto;
         private System.Windows.Forms.Button btnActualizarPiloto;
         private System.Windows.Forms.Button btnGuardarPiloto;
-        private System.Windows.Forms.Button btnVerPilotos;
         private System.Windows.Forms.TextBox txtDireccionPiloto;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblDireccionP;
         private System.Windows.Forms.TextBox txtTelefonoPiloto;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblTelefonoP;
         private System.Windows.Forms.TextBox txtCorreoPiloto;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblCorreoP;
         private System.Windows.Forms.TextBox txtApellidoPiloto;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lblApellidoP;
         private System.Windows.Forms.TextBox txtNombrePiloto;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lblNombreP;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.DataGridView dgvPilotos;
         private System.Windows.Forms.ComboBox cmbGeneroCliente;
@@ -744,5 +833,14 @@ namespace AdminRepartoApp
         private System.Windows.Forms.ComboBox cmbBuscarPiloto;
         private System.Windows.Forms.Button btnAgregarCliente;
         private System.Windows.Forms.Button btnAgregarPiloto;
+        private System.Windows.Forms.Button btnVerPilotos;
+        private System.Windows.Forms.TextBox txtConfirmarCliente;
+        private System.Windows.Forms.Label lblConfirmar;
+        private System.Windows.Forms.TextBox txtContrasenaCliente;
+        private System.Windows.Forms.Label lblContrasena;
+        private System.Windows.Forms.TextBox txtConfirmarPiloto;
+        private System.Windows.Forms.Label lblConfirmarP;
+        private System.Windows.Forms.TextBox txtContrasenaPiloto;
+        private System.Windows.Forms.Label lblContrasenaP;
     }
 }

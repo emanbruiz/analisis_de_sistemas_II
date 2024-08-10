@@ -29,8 +29,9 @@ namespace AdminRepartoApp
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGestionPersonal));
             this.pnlMain = new System.Windows.Forms.Panel();
-            this.lblRegister = new System.Windows.Forms.Label();
+            this.lblGestionPersonal = new System.Windows.Forms.Label();
             this.lblBuscarPersonal = new System.Windows.Forms.Label();
             this.cmbTipoPersonal = new System.Windows.Forms.ComboBox();
             this.lblTipoPersonal = new System.Windows.Forms.Label();
@@ -70,7 +71,7 @@ namespace AdminRepartoApp
             // pnlMain
             // 
             this.pnlMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(113)))), ((int)(((byte)(236)))));
-            this.pnlMain.Controls.Add(this.lblRegister);
+            this.pnlMain.Controls.Add(this.lblGestionPersonal);
             this.pnlMain.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlMain.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.pnlMain.Location = new System.Drawing.Point(0, 0);
@@ -79,17 +80,17 @@ namespace AdminRepartoApp
             this.pnlMain.Size = new System.Drawing.Size(1002, 48);
             this.pnlMain.TabIndex = 3;
             // 
-            // lblRegister
+            // lblGestionPersonal
             // 
-            this.lblRegister.AutoSize = true;
-            this.lblRegister.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRegister.ForeColor = System.Drawing.Color.White;
-            this.lblRegister.Location = new System.Drawing.Point(5, 11);
-            this.lblRegister.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.lblRegister.Name = "lblRegister";
-            this.lblRegister.Size = new System.Drawing.Size(242, 32);
-            this.lblRegister.TabIndex = 0;
-            this.lblRegister.Text = "Gestión de Personal";
+            this.lblGestionPersonal.AutoSize = true;
+            this.lblGestionPersonal.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGestionPersonal.ForeColor = System.Drawing.Color.White;
+            this.lblGestionPersonal.Location = new System.Drawing.Point(5, 11);
+            this.lblGestionPersonal.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblGestionPersonal.Name = "lblGestionPersonal";
+            this.lblGestionPersonal.Size = new System.Drawing.Size(242, 32);
+            this.lblGestionPersonal.TabIndex = 0;
+            this.lblGestionPersonal.Text = "Gestión de Personal";
             // 
             // lblBuscarPersonal
             // 
@@ -105,6 +106,7 @@ namespace AdminRepartoApp
             // 
             this.cmbTipoPersonal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTipoPersonal.FormattingEnabled = true;
+            this.cmbTipoPersonal.ItemHeight = 16;
             this.cmbTipoPersonal.Location = new System.Drawing.Point(747, 77);
             this.cmbTipoPersonal.Margin = new System.Windows.Forms.Padding(4);
             this.cmbTipoPersonal.Name = "cmbTipoPersonal";
@@ -127,7 +129,7 @@ namespace AdminRepartoApp
             this.btnActualizar.Location = new System.Drawing.Point(6, 429);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(127, 41);
-            this.btnActualizar.TabIndex = 12;
+            this.btnActualizar.TabIndex = 16;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = true;
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click_1);
@@ -183,7 +185,7 @@ namespace AdminRepartoApp
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(275, 22);
-            this.txtPassword.TabIndex = 40;
+            this.txtPassword.TabIndex = 11;
             this.txtPassword.UseSystemPasswordChar = true;
             // 
             // lblPassword
@@ -203,14 +205,14 @@ namespace AdminRepartoApp
             this.cmbGenero.Location = new System.Drawing.Point(143, 303);
             this.cmbGenero.Name = "cmbGenero";
             this.cmbGenero.Size = new System.Drawing.Size(275, 24);
-            this.cmbGenero.TabIndex = 38;
+            this.cmbGenero.TabIndex = 12;
             // 
             // btnEliminar
             // 
             this.btnEliminar.Location = new System.Drawing.Point(290, 429);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(127, 41);
-            this.btnEliminar.TabIndex = 11;
+            this.btnEliminar.TabIndex = 17;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click_1);
@@ -231,7 +233,7 @@ namespace AdminRepartoApp
             this.chkPermitirAnadir.Location = new System.Drawing.Point(6, 391);
             this.chkPermitirAnadir.Name = "chkPermitirAnadir";
             this.chkPermitirAnadir.Size = new System.Drawing.Size(123, 21);
-            this.chkPermitirAnadir.TabIndex = 34;
+            this.chkPermitirAnadir.TabIndex = 15;
             this.chkPermitirAnadir.Text = "Permitir Añadir";
             this.chkPermitirAnadir.UseVisualStyleBackColor = true;
             // 
@@ -241,7 +243,7 @@ namespace AdminRepartoApp
             this.chkPermitirEliminar.Location = new System.Drawing.Point(6, 364);
             this.chkPermitirEliminar.Name = "chkPermitirEliminar";
             this.chkPermitirEliminar.Size = new System.Drawing.Size(132, 21);
-            this.chkPermitirEliminar.TabIndex = 33;
+            this.chkPermitirEliminar.TabIndex = 14;
             this.chkPermitirEliminar.Text = "Permitir Eliminar";
             this.chkPermitirEliminar.UseVisualStyleBackColor = true;
             // 
@@ -251,7 +253,7 @@ namespace AdminRepartoApp
             this.chkPermitirEditar.Location = new System.Drawing.Point(6, 337);
             this.chkPermitirEditar.Name = "chkPermitirEditar";
             this.chkPermitirEditar.Size = new System.Drawing.Size(119, 21);
-            this.chkPermitirEditar.TabIndex = 32;
+            this.chkPermitirEditar.TabIndex = 13;
             this.chkPermitirEditar.Text = "Permitir Editar";
             this.chkPermitirEditar.UseVisualStyleBackColor = true;
             // 
@@ -266,7 +268,7 @@ namespace AdminRepartoApp
             this.cmbEstado.Location = new System.Drawing.Point(142, 240);
             this.cmbEstado.Name = "cmbEstado";
             this.cmbEstado.Size = new System.Drawing.Size(275, 24);
-            this.cmbEstado.TabIndex = 31;
+            this.cmbEstado.TabIndex = 10;
             // 
             // cmbRol
             // 
@@ -275,7 +277,7 @@ namespace AdminRepartoApp
             this.cmbRol.Location = new System.Drawing.Point(142, 207);
             this.cmbRol.Name = "cmbRol";
             this.cmbRol.Size = new System.Drawing.Size(275, 24);
-            this.cmbRol.TabIndex = 30;
+            this.cmbRol.TabIndex = 9;
             // 
             // lblEstado
             // 
@@ -303,7 +305,7 @@ namespace AdminRepartoApp
             this.txtDireccion.Margin = new System.Windows.Forms.Padding(4);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(276, 22);
-            this.txtDireccion.TabIndex = 26;
+            this.txtDireccion.TabIndex = 8;
             // 
             // lblDireccion
             // 
@@ -321,7 +323,7 @@ namespace AdminRepartoApp
             this.txtTelefono.Margin = new System.Windows.Forms.Padding(4);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(276, 22);
-            this.txtTelefono.TabIndex = 24;
+            this.txtTelefono.TabIndex = 7;
             // 
             // lblTelefono
             // 
@@ -339,7 +341,7 @@ namespace AdminRepartoApp
             this.txtCorreo.Margin = new System.Windows.Forms.Padding(4);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(276, 22);
-            this.txtCorreo.TabIndex = 22;
+            this.txtCorreo.TabIndex = 6;
             // 
             // lblCorreo
             // 
@@ -357,7 +359,7 @@ namespace AdminRepartoApp
             this.txtDPI.Margin = new System.Windows.Forms.Padding(4);
             this.txtDPI.Name = "txtDPI";
             this.txtDPI.Size = new System.Drawing.Size(276, 22);
-            this.txtDPI.TabIndex = 20;
+            this.txtDPI.TabIndex = 5;
             // 
             // lblDPI
             // 
@@ -375,7 +377,7 @@ namespace AdminRepartoApp
             this.txtApellido.Margin = new System.Windows.Forms.Padding(4);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(276, 22);
-            this.txtApellido.TabIndex = 18;
+            this.txtApellido.TabIndex = 4;
             // 
             // lblApellido
             // 
@@ -393,7 +395,7 @@ namespace AdminRepartoApp
             this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(276, 22);
-            this.txtNombre.TabIndex = 16;
+            this.txtNombre.TabIndex = 3;
             // 
             // lblNombre
             // 
@@ -409,6 +411,7 @@ namespace AdminRepartoApp
             // 
             this.cmbBuscarPersonal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbBuscarPersonal.FormattingEnabled = true;
+            this.cmbBuscarPersonal.ItemHeight = 16;
             this.cmbBuscarPersonal.Location = new System.Drawing.Point(452, 79);
             this.cmbBuscarPersonal.Margin = new System.Windows.Forms.Padding(4);
             this.cmbBuscarPersonal.Name = "cmbBuscarPersonal";
@@ -429,6 +432,7 @@ namespace AdminRepartoApp
             this.Controls.Add(this.lblBuscarPersonal);
             this.Controls.Add(this.pnlMain);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "frmGestionPersonal";
@@ -447,7 +451,7 @@ namespace AdminRepartoApp
         #endregion
 
         private System.Windows.Forms.Panel pnlMain;
-        private System.Windows.Forms.Label lblRegister;
+        private System.Windows.Forms.Label lblGestionPersonal;
         private System.Windows.Forms.Label lblBuscarPersonal;
         private System.Windows.Forms.ComboBox cmbTipoPersonal;
         private System.Windows.Forms.Label lblTipoPersonal;

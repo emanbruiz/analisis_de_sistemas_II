@@ -1,4 +1,5 @@
-﻿using System;
+﻿// Form hecho por Alfonso Emanuel Barahona Ruiz || 0901-21-4035
+using System;
 using System.Data;
 using System.Linq;
 using System.Drawing;
@@ -16,7 +17,7 @@ namespace ClientesRepartoApp
         {
             InitializeComponent();
             this.idPersona = idPersona;
-            pbImagenProducto.BackgroundImageLayout = ImageLayout.Stretch; // Siempre stretch
+            pbImagenProducto.SizeMode = PictureBoxSizeMode.StretchImage; // Siempre stretch
         }
 
         private void frmRealizarPedidos_Load(object sender, EventArgs e)
@@ -211,9 +212,10 @@ namespace ClientesRepartoApp
                     cmdActualizarStock.Parameters.AddWithValue("@idProducto", idProducto);
                     cmdActualizarStock.ExecuteNonQuery();
 
-                    MessageBox.Show("Pedido realizado exitosamente.");
+                    MessageBox.Show("Pedido realizado exitosamente, favor de esperar a que le asignen un piloto a su entrega.");
                     // Recargar la ventana
                     frmRealizarPedidos_Load(sender, e);
+                    this.Close();
                 }
             }
             catch (Exception ex)

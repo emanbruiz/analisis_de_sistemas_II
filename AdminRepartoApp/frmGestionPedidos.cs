@@ -1,4 +1,5 @@
-﻿using System;
+﻿//Form Hecho por Anika Miscelly Escoto Leon || 0901-21-8122
+using System;
 using System.Data;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;

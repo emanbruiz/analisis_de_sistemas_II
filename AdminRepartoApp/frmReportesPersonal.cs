@@ -1,4 +1,5 @@
-﻿using System;
+﻿// Form hecho por Jorge Enrique Ávila || 0901-21-1280
+using System;
 using System.Data;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
@@ -195,6 +196,11 @@ namespace AdminRepartoApp
                     }
                 }
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

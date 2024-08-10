@@ -242,12 +242,6 @@
     <Compile Include="frmReportesPersonal.Designer.cs">
       <DependentUpon>frmReportesPersonal.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmUpdate.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmUpdate.Designer.cs">
-      <DependentUpon>frmUpdate.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmVerProductos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -288,9 +282,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmReportesPersonal.resx">
       <DependentUpon>frmReportesPersonal.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmUpdate.resx">
-      <DependentUpon>frmUpdate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmVerProductos.resx">
       <DependentUpon>frmVerProductos.cs</DependentUpon>

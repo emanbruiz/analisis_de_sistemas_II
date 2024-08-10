@@ -1,4 +1,5 @@
-﻿using System;
+﻿// Form hecho por Anika Miscelly Escoto Leon || 0901-21-8122
+using System;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -95,8 +96,8 @@ namespace ClientesRepartoApp
             try
             {
                 // Crear una instancia del formulario frVerPedidos
-                frmPerfil Perfilform = new frmPerfil(idPersona);
-                Perfilform.Show();
+                frmVerPerfil verPerfilform = new frmVerPerfil(idPersona);
+                verPerfilform.Show();
             }
             catch (Exception ex)
             {

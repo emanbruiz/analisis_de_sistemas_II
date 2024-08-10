@@ -1,4 +1,5 @@
-﻿using ClosedXML.Excel;
+﻿//Form hecho por Pablo Cesar Flores Marroquín || 0901-21-3546
+using ClosedXML.Excel;
 using MySql.Data.MySqlClient;
 using System;
 using System.Data;
@@ -40,11 +41,11 @@ namespace AdminRepartoApp
                 try
                 {
                     connection.Open();
-                    string query = "SELECT No_Factura FROM Pedido";
+                    string query = "SELECT DISTINCT No_Factura FROM Pedido"; // Usar DISTINCT para evitar duplicados
                     MySqlCommand cmd = new MySqlCommand(query, connection);
                     MySqlDataReader reader = cmd.ExecuteReader();
 
-                    cmbBuscarPedido.Items.Clear();
+                    cmbBuscarPedido.Items.Clear(); // Limpiar el ComboBox antes de añadir nuevos elementos
                     while (reader.Read())
                     {
                         cmbBuscarPedido.Items.Add(reader["No_Factura"].ToString());
@@ -68,6 +69,7 @@ namespace AdminRepartoApp
                 }
             }
         }
+
 
         private void cmbBuscarPedido_SelectedIndexChanged(object sender, EventArgs e)
         {

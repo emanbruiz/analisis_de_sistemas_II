@@ -1,6 +1,8 @@
-﻿using System;
+﻿// Form hecho por Alfonso Emanuel Barahona Ruiz || 0901-21-4035
+using System;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.Data;
 
 namespace AdminRepartoApp
 {
@@ -13,11 +15,12 @@ namespace AdminRepartoApp
             CargarComboboxPedidosNoAsignados();
             CargarComboboxPilotos();
             CargarComboboxProductos();
+            CargarPedidosNoAsignados();
         }
 
         private void CargarComboboxValores()
         {
-            cmbEstadoEnvio.Items.AddRange(new object[] { "En Tránsito", "Entregado", "Retrasado", "Cancelado" });
+            cmbEstadoEnvio.Items.AddRange(new object[] { "En Tránsito", "Entregado", "Retrasado", "Cancelado", "Pendiente" });
         }
 
         private void CargarComboboxPedidosNoAsignados()
@@ -130,6 +133,41 @@ namespace AdminRepartoApp
             }
         }
 
+        private void CargarPedidosNoAsignados()
+        {
+            string connectionString = "Server=127.0.0.1;Database=comercioelectronico;Uid=root;Pwd=161101;";
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    string query = @"
+                        SELECT 
+                            P.No_Factura AS 'Número de Factura',
+                            DP.Nombres,
+                            DP.Apellidos,
+                            DP.Direccion_Personal AS 'Dirección de entrega',
+                            P.Estado,
+                            P.Fecha_Solicitud AS 'Fecha de la solicitud',
+                            P.Cantidad,
+                            P.Monto,
+                            P.Envio
+                        FROM PEDIDO P
+                        INNER JOIN DATOS_PERSONALES DP ON P.ID_PERSONA = DP.ID_PERSONA
+                        WHERE DP.ID_PILOTO IS NULL";
+                    MySqlCommand cmd = new MySqlCommand(query, connection);
+                    MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    adapter.Fill(dt);
+                    dgvPedidos.DataSource = dt;
+                }
+                catch (MySqlException ex)
+                {
+                    MessageBox.Show("Error al cargar pedidos no asignados: " + ex.Message);
+                }
+            }
+        }
+
         private void cmbBuscarPedidoNoAsignado_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cmbBuscarPedidoNoAsignado.SelectedItem == null)
@@ -212,10 +250,11 @@ namespace AdminRepartoApp
                     connection.Open();
 
                     // Asignar el piloto al pedido
-                    string queryPedido = "UPDATE Pedido SET ID_Piloto = @idPiloto WHERE No_Factura = @noFactura";
+                    string queryPedido = "UPDATE Pedido SET ID_Piloto = @idPiloto, Estado = @estado WHERE No_Factura = @noFactura";
                     MySqlCommand cmdPedido = new MySqlCommand(queryPedido, connection);
                     cmdPedido.Parameters.AddWithValue("@idPiloto", idPiloto);
                     cmdPedido.Parameters.AddWithValue("@noFactura", noFactura);
+                    cmdPedido.Parameters.AddWithValue("@estado", estadoEnvio);
 
                     cmdPedido.ExecuteNonQuery();
 
@@ -232,6 +271,7 @@ namespace AdminRepartoApp
                     cmdEnvio.ExecuteNonQuery();
                     MessageBox.Show("Pedido asignado y envío guardado exitosamente.");
                     CargarComboboxPedidosNoAsignados(); // Recargar los pedidos sin asignar
+                    CargarPedidosNoAsignados(); // Recargar el DataGridView
                 }
                 catch (MySqlException ex)
                 {

@@ -1,6 +1,8 @@
-﻿using System;
+﻿//Form Hecho por Maty Lourdes Mancilla García || 0901-21-2128
+using System;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.Text.RegularExpressions; // Necesario para las expresiones regulares
 
 namespace AdminRepartoApp
 {
@@ -13,6 +15,11 @@ namespace AdminRepartoApp
 
         private void btnRegisterCliente_Click(object sender, EventArgs e)
         {
+            if (!ValidarCampos()) // Validar campos antes de proceder
+            {
+                return;
+            }
+
             // Cadena de conexión
             string connectionString = "Server=127.0.0.1;Database=comercioelectronico;Uid=root;Pwd=161101;";
             using (MySqlConnection connection = new MySqlConnection(connectionString))
@@ -88,6 +95,48 @@ namespace AdminRepartoApp
                     MessageBox.Show("Ocurrió un error: " + ex.Message);
                 }
             }
+        }
+
+        private bool ValidarCampos()
+        {
+            // Validación de campos no vacíos
+            if (string.IsNullOrWhiteSpace(txtNombres.Text) || string.IsNullOrWhiteSpace(txtApellidos.Text) ||
+                string.IsNullOrWhiteSpace(txtDireccion.Text) || string.IsNullOrWhiteSpace(txtMail.Text) ||
+                string.IsNullOrWhiteSpace(txtDPI.Text) || string.IsNullOrWhiteSpace(txtPassword.Text))
+            {
+                MessageBox.Show("Por favor, complete todos los campos.");
+                return false;
+            }
+
+            // Validación de solo letras para nombres y apellidos
+            if (!Regex.IsMatch(txtNombres.Text, @"^[a-zA-Z\s]+$") || !Regex.IsMatch(txtApellidos.Text, @"^[a-zA-Z\s]+$"))
+            {
+                MessageBox.Show("Los nombres y apellidos solo deben contener letras.");
+                return false;
+            }
+
+            // Validación de correo electrónico
+            if (!Regex.IsMatch(txtMail.Text, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
+            {
+                MessageBox.Show("Por favor, ingrese un correo electrónico válido.");
+                return false;
+            }
+
+            // Validación de dirección personal
+            try
+            {
+                if (txtDireccion.Text.Length < 8) // Por ejemplo, longitud mínima de 8 caracteres
+                {
+                    throw new Exception("La dirección personal es demasiado corta.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error en la dirección personal: " + ex.Message);
+                return false;
+            }
+
+            return true;
         }
     }
 }

@@ -29,6 +29,7 @@ namespace ClientesRepartoApp
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenu));
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnPerfil = new System.Windows.Forms.Button();
             this.btnVerPedidos = new System.Windows.Forms.Button();
@@ -41,7 +42,7 @@ namespace ClientesRepartoApp
             this.lblFyH = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.btnLogOut = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblMain = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -56,18 +57,20 @@ namespace ClientesRepartoApp
             this.panel3.Controls.Add(this.btnRealizarPedidos);
             this.panel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel3.ForeColor = System.Drawing.Color.White;
-            this.panel3.Location = new System.Drawing.Point(0, 76);
+            this.panel3.Location = new System.Drawing.Point(0, 92);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(155, 155);
+            this.panel3.Size = new System.Drawing.Size(207, 161);
             this.panel3.TabIndex = 3;
             // 
             // btnPerfil
             // 
             this.btnPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnPerfil.Location = new System.Drawing.Point(2, 104);
+            this.btnPerfil.Location = new System.Drawing.Point(3, 128);
+            this.btnPerfil.Margin = new System.Windows.Forms.Padding(4);
             this.btnPerfil.Name = "btnPerfil";
-            this.btnPerfil.Size = new System.Drawing.Size(153, 23);
-            this.btnPerfil.TabIndex = 5;
+            this.btnPerfil.Size = new System.Drawing.Size(204, 28);
+            this.btnPerfil.TabIndex = 3;
             this.btnPerfil.Text = "Perfil";
             this.btnPerfil.UseVisualStyleBackColor = true;
             this.btnPerfil.Click += new System.EventHandler(this.btnPerfil_Click);
@@ -75,10 +78,11 @@ namespace ClientesRepartoApp
             // btnVerPedidos
             // 
             this.btnVerPedidos.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnVerPedidos.Location = new System.Drawing.Point(1, 53);
+            this.btnVerPedidos.Location = new System.Drawing.Point(1, 65);
+            this.btnVerPedidos.Margin = new System.Windows.Forms.Padding(4);
             this.btnVerPedidos.Name = "btnVerPedidos";
-            this.btnVerPedidos.Size = new System.Drawing.Size(153, 23);
-            this.btnVerPedidos.TabIndex = 4;
+            this.btnVerPedidos.Size = new System.Drawing.Size(204, 28);
+            this.btnVerPedidos.TabIndex = 2;
             this.btnVerPedidos.Text = "Ver Pedidos";
             this.btnVerPedidos.UseVisualStyleBackColor = true;
             this.btnVerPedidos.Click += new System.EventHandler(this.btnVerPedidos_Click);
@@ -86,10 +90,11 @@ namespace ClientesRepartoApp
             // btnRealizarPedidos
             // 
             this.btnRealizarPedidos.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnRealizarPedidos.Location = new System.Drawing.Point(1, 3);
+            this.btnRealizarPedidos.Location = new System.Drawing.Point(1, 4);
+            this.btnRealizarPedidos.Margin = new System.Windows.Forms.Padding(4);
             this.btnRealizarPedidos.Name = "btnRealizarPedidos";
-            this.btnRealizarPedidos.Size = new System.Drawing.Size(153, 23);
-            this.btnRealizarPedidos.TabIndex = 3;
+            this.btnRealizarPedidos.Size = new System.Drawing.Size(204, 28);
+            this.btnRealizarPedidos.TabIndex = 1;
             this.btnRealizarPedidos.Text = "Realizar Pedidos";
             this.btnRealizarPedidos.UseVisualStyleBackColor = true;
             this.btnRealizarPedidos.Click += new System.EventHandler(this.btnRealizarPedidos_Click);
@@ -97,9 +102,10 @@ namespace ClientesRepartoApp
             // lblInformativo
             // 
             this.lblInformativo.AutoSize = true;
-            this.lblInformativo.Location = new System.Drawing.Point(-2, 37);
+            this.lblInformativo.Location = new System.Drawing.Point(3, 47);
+            this.lblInformativo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblInformativo.Name = "lblInformativo";
-            this.lblInformativo.Size = new System.Drawing.Size(125, 13);
+            this.lblInformativo.Size = new System.Drawing.Size(165, 17);
             this.lblInformativo.TabIndex = 4;
             this.lblInformativo.Text = "Ha iniciado sesión como:";
             // 
@@ -107,9 +113,10 @@ namespace ClientesRepartoApp
             // 
             this.lblUser.AutoSize = true;
             this.lblUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUser.Location = new System.Drawing.Point(129, 37);
+            this.lblUser.Location = new System.Drawing.Point(178, 47);
+            this.lblUser.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(50, 13);
+            this.lblUser.Size = new System.Drawing.Size(64, 17);
             this.lblUser.TabIndex = 5;
             this.lblUser.Text = "Usuario";
             this.lblUser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -118,18 +125,20 @@ namespace ClientesRepartoApp
             // 
             this.lblMenu.AutoSize = true;
             this.lblMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMenu.Location = new System.Drawing.Point(12, 21);
+            this.lblMenu.Location = new System.Drawing.Point(16, 26);
+            this.lblMenu.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMenu.Name = "lblMenu";
-            this.lblMenu.Size = new System.Drawing.Size(63, 24);
+            this.lblMenu.Size = new System.Drawing.Size(77, 29);
             this.lblMenu.TabIndex = 0;
             this.lblMenu.Text = "Menú";
             // 
             // btnCerrarSesión
             // 
             this.btnCerrarSesión.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCerrarSesión.Location = new System.Drawing.Point(694, 21);
+            this.btnCerrarSesión.Location = new System.Drawing.Point(925, 26);
+            this.btnCerrarSesión.Margin = new System.Windows.Forms.Padding(4);
             this.btnCerrarSesión.Name = "btnCerrarSesión";
-            this.btnCerrarSesión.Size = new System.Drawing.Size(94, 23);
+            this.btnCerrarSesión.Size = new System.Drawing.Size(125, 28);
             this.btnCerrarSesión.TabIndex = 1;
             this.btnCerrarSesión.Text = "Cerrar Sesión";
             this.btnCerrarSesión.UseVisualStyleBackColor = true;
@@ -140,12 +149,13 @@ namespace ClientesRepartoApp
             this.panel2.Controls.Add(this.lblFyH);
             this.panel2.Controls.Add(this.lblFecha);
             this.panel2.Controls.Add(this.btnLogOut);
-            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.lblMain);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(145)))), ((int)(((byte)(104)))));
             this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(800, 34);
+            this.panel2.Size = new System.Drawing.Size(698, 42);
             this.panel2.TabIndex = 3;
             // 
             // lblFyH
@@ -153,20 +163,23 @@ namespace ClientesRepartoApp
             this.lblFyH.AutoSize = true;
             this.lblFyH.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFyH.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.lblFyH.Location = new System.Drawing.Point(202, 9);
+            this.lblFyH.Location = new System.Drawing.Point(265, 11);
+            this.lblFyH.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFyH.Name = "lblFyH";
-            this.lblFyH.Size = new System.Drawing.Size(50, 13);
+            this.lblFyH.Size = new System.Drawing.Size(105, 17);
             this.lblFyH.TabIndex = 6;
-            this.lblFyH.Text = "Usuario";
+            this.lblFyH.Text = "Fecha y Hora";
             this.lblFyH.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblFecha
             // 
             this.lblFecha.AutoSize = true;
             this.lblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFecha.Location = new System.Drawing.Point(150, 9);
+            this.lblFecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.lblFecha.Location = new System.Drawing.Point(200, 11);
+            this.lblFecha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(46, 13);
+            this.lblFecha.Size = new System.Drawing.Size(57, 17);
             this.lblFecha.TabIndex = 6;
             this.lblFecha.Text = "Fecha:";
             // 
@@ -174,24 +187,26 @@ namespace ClientesRepartoApp
             // 
             this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLogOut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.btnLogOut.Location = new System.Drawing.Point(703, 9);
+            this.btnLogOut.Location = new System.Drawing.Point(569, 10);
+            this.btnLogOut.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(94, 23);
-            this.btnLogOut.TabIndex = 1;
+            this.btnLogOut.Size = new System.Drawing.Size(125, 28);
+            this.btnLogOut.TabIndex = 4;
             this.btnLogOut.Text = "Cerrar Sesión";
             this.btnLogOut.UseVisualStyleBackColor = true;
             this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
-            // label1
+            // lblMain
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.label1.Location = new System.Drawing.Point(12, 1);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 24);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Menú";
+            this.lblMain.AutoSize = true;
+            this.lblMain.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMain.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.lblMain.Location = new System.Drawing.Point(13, 9);
+            this.lblMain.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblMain.Name = "lblMain";
+            this.lblMain.Size = new System.Drawing.Size(77, 29);
+            this.lblMain.TabIndex = 0;
+            this.lblMain.Text = "Menú";
             // 
             // panel1
             // 
@@ -202,21 +217,26 @@ namespace ClientesRepartoApp
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(145)))), ((int)(((byte)(104)))));
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 34);
+            this.panel1.Size = new System.Drawing.Size(698, 43);
             this.panel1.TabIndex = 2;
             // 
             // frmMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 319);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(698, 349);
             this.Controls.Add(this.lblUser);
             this.Controls.Add(this.lblInformativo);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmMenu";
-            this.Text = "frmMenú";
+            this.Text = "Menú";
             this.Load += new System.EventHandler(this.frmMenu_Load);
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -240,7 +260,7 @@ namespace ClientesRepartoApp
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Button btnLogOut;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblMain;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblFyH;
     }

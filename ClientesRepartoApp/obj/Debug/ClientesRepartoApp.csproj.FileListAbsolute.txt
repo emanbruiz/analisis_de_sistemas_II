@@ -3,7 +3,6 @@ C:\Users\DELL-PC\source\repos\ClientesRepartoApp\bin\Debug\ClientesRepartoApp.ex
 C:\Users\DELL-PC\source\repos\ClientesRepartoApp\bin\Debug\ClientesRepartoApp.pdb
 C:\Users\DELL-PC\source\repos\ClientesRepartoApp\obj\Debug\ClientesRepartoApp.csproj.AssemblyReference.cache
 C:\Users\DELL-PC\source\repos\ClientesRepartoApp\obj\Debug\ClientesRepartoApp.frmLogin.resources
-C:\Users\DELL-PC\source\repos\ClientesRepartoApp\obj\Debug\ClientesRepartoApp.frmContrasena.resources
 C:\Users\DELL-PC\source\repos\ClientesRepartoApp\obj\Debug\ClientesRepartoApp.frmMenu.resources
 C:\Users\DELL-PC\source\repos\ClientesRepartoApp\obj\Debug\ClientesRepartoApp.frmRegistro.resources
 C:\Users\DELL-PC\source\repos\ClientesRepartoApp\obj\Debug\ClientesRepartoApp.Properties.Resources.resources
@@ -46,4 +45,4 @@ C:\Users\DELL-PC\source\repos\ClientesRepartoApp\bin\Debug\System.Threading.Task
 C:\Users\DELL-PC\source\repos\ClientesRepartoApp\obj\Debug\ClientesRepartoApp.csproj.CopyComplete
 C:\Users\DELL-PC\source\repos\ClientesRepartoApp\obj\Debug\ClientesRepartoApp.frmRealizarPedidos.resources
 C:\Users\DELL-PC\source\repos\ClientesRepartoApp\obj\Debug\ClientesRepartoApp.frmVerPedidos.resources
-C:\Users\DELL-PC\source\repos\ClientesRepartoApp\obj\Debug\ClientesRepartoApp.frmPerfil.resources
+C:\Users\DELL-PC\source\repos\ClientesRepartoApp\obj\Debug\ClientesRepartoApp.frmVerPerfil.resources

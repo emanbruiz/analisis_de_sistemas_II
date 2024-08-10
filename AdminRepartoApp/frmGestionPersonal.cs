@@ -1,4 +1,5 @@
-﻿using System;
+﻿//Form hecho por Alfonso Emanuel Barahona Ruiz || 0901-21-4035
+using System;
 using System.Data;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;

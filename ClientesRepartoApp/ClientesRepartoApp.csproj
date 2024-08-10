@@ -104,23 +104,11 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmContrasena.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmContrasena.Designer.cs">
-      <DependentUpon>frmContrasena.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmMenú.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmMenú.Designer.cs">
       <DependentUpon>frmMenú.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmPerfil.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmPerfil.Designer.cs">
-      <DependentUpon>frmPerfil.cs</DependentUpon>
     </Compile>
     <Compile Include="frmRealizarPedidos.cs">
       <SubType>Form</SubType>
@@ -140,19 +128,19 @@
     <Compile Include="frmVerPedidos.Designer.cs">
       <DependentUpon>frmVerPedidos.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmVerPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVerPerfil.Designer.cs">
+      <DependentUpon>frmVerPerfil.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmContrasena.resx">
-      <DependentUpon>frmContrasena.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmMenú.resx">
       <DependentUpon>frmMenú.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmPerfil.resx">
-      <DependentUpon>frmPerfil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmRealizarPedidos.resx">
       <DependentUpon>frmRealizarPedidos.cs</DependentUpon>
@@ -162,6 +150,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmVerPedidos.resx">
       <DependentUpon>frmVerPedidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVerPerfil.resx">
+      <DependentUpon>frmVerPerfil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

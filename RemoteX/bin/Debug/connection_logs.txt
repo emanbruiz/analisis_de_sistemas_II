@@ -1,0 +1,7 @@
+8/08/2024 20:53:26: Connection to 192.168.1.10 on port 8080 using TCP - Status: Failed
+8/08/2024 20:53:45: Connection to 192.168.1.10 on port 8080 using TCP - Status: Failed
+8/08/2024 20:55:19: Connection to 192.168.1.10 on port 8080 using TCP - Status: Failed
+8/08/2024 20:56:12: Connection to 192.168.1.10 on port 8080 using TCP - Status: Connected
+8/08/2024 20:56:40: Connection to 192.168.1.10 on port 8080 using TCP - Status: Connected
+8/08/2024 20:57:17: Connection to 192.168.1.10 on port 8080 using TCP - Status: Connected
+8/08/2024 20:57:49: Connection to 192.168.1.10 on port 8080 using TCP - Status: Connected

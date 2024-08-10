@@ -1,4 +1,5 @@
-﻿using System;
+﻿// Form hecho por Pablo Cesar Flores Marroquín || 0901-21-3546
+using System;
 using System.Data;
 using System.Linq;
 using System.Text.RegularExpressions;
@@ -175,9 +176,10 @@ namespace ClientesRepartoApp
                     connection.Open();
                     string equipo = Dns.GetHostName();
                     string ip = ObtenerIPv4();
+                    string jsonAccion = $"{{\"accion\":\"{accion}\", \"equipo\":\"{equipo}\", \"ip\":\"{ip}\"}}";
                     string query = "INSERT INTO logactividades (ID_Empleado, Accion, FechaHora) VALUES (NULL, @accion, NOW())";
                     MySqlCommand cmd = new MySqlCommand(query, connection);
-                    cmd.Parameters.AddWithValue("@accion", $"{accion}. Equipo: {equipo}, IP: {ip}");
+                    cmd.Parameters.AddWithValue("@accion", jsonAccion);
                     cmd.ExecuteNonQuery();
                 }
                 catch (Exception ex)
